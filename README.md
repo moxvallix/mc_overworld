@@ -10,24 +10,25 @@ You will need to have it installed, and run `git lfs install` to use the assets.
 
 ## Attributions:
 
-Textures:
-Vilja Pix 2.0 by ROllerozxa
-CC BY-SA 4.0
+### Textures:
+#### Main Textures:
+Vilja Pix 2.0 by ROllerozxa  
+CC BY-SA 4.0  
 https://content.minetest.net/packages/ROllerozxa/vilja_pix_2/
 
-Music:
-Cassette Mod by The Pamps
-Song "hair.ogg" by heliogram
-CC BY-SA 4.0
+#### Nether Portal Texture:
+Nether by PilzAdam  
+CC BY-SA 3.0  
+https://content.minetest.net/packages/PilzAdam/nether/
+
+### Music:
+Cassette Mod by The Pamps  
+Song "hair.ogg" by heliogram  
+CC BY-SA 4.0  
 https://content.minetest.net/packages/The_Pamps/cassette_mod/
 
-Sound Effects:
-SnowSong, the EPIC Sound Pack by tacotexmex
-Sounds by Sn0wShepherd
-CC BY-SA 4.0
+### Sound Effects:
+SnowSong, the EPIC Sound Pack by tacotexmex  
+Sounds by Sn0wShepherd  
+CC BY-SA 4.0  
 https://content.minetest.net/packages/texmex/snowsong/
-
-Nether Portal Texture:
-Nether by PilzAdam
-CC BY-SA 3.0
-https://content.minetest.net/packages/PilzAdam/nether/
