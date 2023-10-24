@@ -1,0 +1,4691 @@
+{
+    "meta": {
+        "game_version": "1.2.8290",
+        "name": "mc_overworld_1_1",
+        "version_timestamp": "2023-10-24 06:43:55.002348 UTC"
+    },
+    "about": {
+        "author": "Moxvallix",
+        "short_description": "It's like, minecraft or something.",
+        "full_description": "# mc_overworld_1_1\nAn epic minecraft map. Much epic.\n\nCC-BY-SA 4.0 Moxvallix\nhttps://moxvallix.com\n\n## Attributions:\n\nTextures:\nVilja Pix 2.0 by ROllerozxa\nCC-BY-SA 4.0\nhttps://content.minetest.net/packages/ROllerozxa/vilja_pix_2/\n\nMusic:\nCassette Mod by The Pamps\nSong \"hair.ogg\" by heliogram\nCC-BY-SA 4.0\nhttps://content.minetest.net/packages/The_Pamps/cassette_mod/\n\nSound Effects:\nSnowSong, the EPIC Sound Pack by tacotexmex\nSounds by Sn0wShepherd\nCC-BY-SA 4.0\nhttps://content.minetest.net/packages/texmex/snowsong/\n\nNether Portal Texture:\nNether by PilzAdam\nCC-BY-SA 3.0\nhttps://content.minetest.net/packages/PilzAdam/nether/",
+        "welcome_message": "It's minecrafting time."
+    },
+    "settings": {
+        "default_server_mode": "gun_game",
+        "ambient_light_color": [255, 255, 255, 255],
+        "warmup_theme": {
+            "id": null
+        }
+    },
+    "playtesting": {
+        "mode": "gun_game"
+    },
+    "external_resources": [
+        {
+            "path": "bg_grass_wall.png",
+            "file_hash": "53299169c9c30559bd4a55df556fdcb2aec45d3579587dbc94a8fa4ad6311860",
+            "id": "@bg_grass_wall",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true,
+                "material": "wood"
+            },
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@sounds/grass.ogg"
+                    }
+                }
+            }
+        },
+        {
+            "path": "bg_stone_wall.png",
+            "file_hash": "41f6f56f43e284b72a84e1450011cecd3cd644d19c4d633c4a26babbd8b77f6e",
+            "id": "@bg_stone_wall",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@sounds/stone.ogg"
+                    }
+                }
+            }
+        },
+        {
+            "path": "coarse_dirt.png",
+            "file_hash": "e44e6caaa43a4e4ab7028b3bcb544100a3d5a0c2b2c6a611f33d370c1c86e723",
+            "id": "@coarse_dirt",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@gravel"
+                    }
+                }
+            }
+        },
+        {
+            "path": "cobblestone.png",
+            "file_hash": "9c630781b9114fc87a0e15192aad600ef824f53ca0e569c16bfff50bced2d11d",
+            "id": "@cobblestone",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@sounds/stone.ogg"
+                    }
+                }
+            }
+        },
+        {
+            "path": "cobblestone_wall.png",
+            "file_hash": "f91eccadbbd2be1bcbb60023e9eb1b9bd1e4240d88710c0ac08b9f85772331fd",
+            "id": "@cobblestone_wall",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true
+            },
+            "as_nonphysical": {
+                "illuminate_like_wall": true
+            }
+        },
+        {
+            "path": "cobblestone_wall_top.png",
+            "file_hash": "1f0ad9ff6859104918b5a0b3a2e4ab834d01994407ad23c3843224ee4aed3aa5",
+            "id": "@cobblestone_wall_top",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true
+            },
+            "as_nonphysical": {
+                "illuminate_like_wall": true
+            }
+        },
+        {
+            "path": "dirt.png",
+            "file_hash": "4d90e9ca60c67466ad35e68d4c47057565b6c623e4ed379bb016e02b0ca11924",
+            "id": "@dirt",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@gravel"
+                    }
+                }
+            }
+        },
+        {
+            "path": "dirt_path.png",
+            "file_hash": "296debfd545bd34c6933b0ebbe7ad0b48b4744ff2c6e63f99d649a4001ad3846",
+            "id": "@dirt_path",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@sounds/grass.ogg"
+                    }
+                }
+            }
+        },
+        {
+            "path": "easteregg.png",
+            "file_hash": "cf47ac84c16e5cf390d3b7c9d2c0bda540e1e9ca0139e33548983fa1499072b7",
+            "id": "@easteregg",
+            "domain": "FOREGROUND",
+            "size": [1023, 140]
+        },
+        {
+            "path": "fg_obsidian.png",
+            "file_hash": "a510ba35f34acda15d78e3ff3e7836d48b959f0106e68637949495da693efd3b",
+            "id": "@fg_obsidian",
+            "domain": "FOREGROUND",
+            "size": [64, 64]
+        },
+        {
+            "path": "fg_stone.png",
+            "file_hash": "966607dc4dc7163f659fa48b950d5b4e75b686de16b5af64532a56356b97bb81",
+            "id": "@fg_stone",
+            "domain": "FOREGROUND",
+            "size": [64, 64]
+        },
+        {
+            "path": "fg_stone_wall.png",
+            "file_hash": "41f6f56f43e284b72a84e1450011cecd3cd644d19c4d633c4a26babbd8b77f6e",
+            "id": "@fg_stone_wall",
+            "domain": "FOREGROUND",
+            "size": [64, 64]
+        },
+        {
+            "path": "grass.png",
+            "file_hash": "0192ebcb06049dc1357df617de166e9bf089231912c3fe00e2a7a5627d8cf5eb",
+            "id": "@grass.png",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@sounds/grass.ogg"
+                    }
+                }
+            }
+        },
+        {
+            "path": "grass_wall.png",
+            "file_hash": "53299169c9c30559bd4a55df556fdcb2aec45d3579587dbc94a8fa4ad6311860",
+            "id": "@grass_wall",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true,
+                "material": "wood"
+            }
+        },
+        {
+            "path": "grass_wall_top.png",
+            "file_hash": "0192ebcb06049dc1357df617de166e9bf089231912c3fe00e2a7a5627d8cf5eb",
+            "id": "@grass_wall_top",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true,
+                "material": "wood"
+            },
+            "as_nonphysical": {
+                "illuminate_like_wall": true
+            }
+        },
+        {
+            "path": "lava.gif",
+            "file_hash": "137b2353a1570b901f1c8ca5ab7f85e89b7fc5c2f28a769658c3883acbe01761",
+            "id": "@lava",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "illuminate_like_wall": true,
+                "custom_footstep": {
+                    "walking_speed": 0.4300000071525574
+                }
+            }
+        },
+        {
+            "path": "miniature.png",
+            "file_hash": "d45f43dc67102eea71e4ff70ab468cb2d3a3a04e609c12a8b90b35d3137a2c2a",
+            "id": "@miniature",
+            "size": [400, 400]
+        },
+        {
+            "path": "nether_portal.gif",
+            "file_hash": "4a66962b5d6bdcc7ab92f9f08af0026b3e091f2c1d2b1b6d4d04568b220d4f2b",
+            "id": "@nether_portal",
+            "size": [64, 64]
+        },
+        {
+            "path": "noclip_grass_wall_top.png",
+            "file_hash": "0192ebcb06049dc1357df617de166e9bf089231912c3fe00e2a7a5627d8cf5eb",
+            "id": "@noclip_grass_wall_top",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true,
+                "is_walk_through": true,
+                "is_throw_through": true,
+                "is_melee_throw_through": true,
+                "is_shoot_through": true
+            }
+        },
+        {
+            "path": "noclip_stone.png",
+            "file_hash": "966607dc4dc7163f659fa48b950d5b4e75b686de16b5af64532a56356b97bb81",
+            "id": "@noclip_stone",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true,
+                "is_walk_through": true,
+                "is_throw_through": true,
+                "is_melee_throw_through": true,
+                "is_shoot_through": true
+            }
+        },
+        {
+            "path": "noclip_stone_wall.png",
+            "file_hash": "41f6f56f43e284b72a84e1450011cecd3cd644d19c4d633c4a26babbd8b77f6e",
+            "id": "@noclip_stone_wall",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true,
+                "is_walk_through": true,
+                "is_throw_through": true,
+                "is_melee_throw_through": true,
+                "is_shoot_through": true
+            }
+        },
+        {
+            "path": "oak_leaves.png",
+            "file_hash": "c18bb699f814b6df21ecfe2564186914f2cd29e7233b54d5a0e6e0b8a4d03151",
+            "id": "@oak_leaves",
+            "domain": "FOREGROUND",
+            "size": [64, 64]
+        },
+        {
+            "path": "oak_log_top.png",
+            "file_hash": "4abf98a80f7e7de99fe8f6a4666e796e83e4b3b1ae7d1df9d0334de4c4b4b6eb",
+            "id": "@oak_log_top",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true,
+                "material": "wood"
+            }
+        },
+        {
+            "path": "oak_planks.png",
+            "file_hash": "9d3b1814e79d7b43e1889809b8cd32703134d024cfdb37a37e99a191de7fcfa4",
+            "id": "@oak_planks",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@wood"
+                    }
+                }
+            }
+        },
+        {
+            "path": "oak_stairs.png",
+            "file_hash": "973e2a381b236fc8f64b2034a049f0349f318b14447e55d212ad59873c552e3a",
+            "id": "@oak_stairs",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@wood"
+                    }
+                }
+            }
+        },
+        {
+            "path": "obsidian.png",
+            "file_hash": "a510ba35f34acda15d78e3ff3e7836d48b959f0106e68637949495da693efd3b",
+            "id": "@obsidian",
+            "size": [64, 64]
+        },
+        {
+            "path": "stone.png",
+            "file_hash": "5f69b35caf33ddf82f1e9ab3f348bd114ba32d0090b37be03374bbfcc40d8b89",
+            "id": "@stone.png",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@sounds/stone.ogg"
+                    }
+                }
+            }
+        },
+        {
+            "path": "stone_wall.png",
+            "file_hash": "41f6f56f43e284b72a84e1450011cecd3cd644d19c4d633c4a26babbd8b77f6e",
+            "id": "@stone_wall",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true
+            }
+        },
+        {
+            "path": "stop_wall_top.png",
+            "file_hash": "966607dc4dc7163f659fa48b950d5b4e75b686de16b5af64532a56356b97bb81",
+            "id": "@stop_wall_top",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true
+            }
+        },
+        {
+            "path": "title.png",
+            "file_hash": "80c6363339dcb96d6f55659ccc3831443d3f6f472d9f9a249411a5ce13f51424",
+            "id": "@title",
+            "size": [1023, 159]
+        },
+        {
+            "path": "water_dirt.gif",
+            "file_hash": "83e586ff00e1479b19aeb221d04c259fb0a1b4454c87c823686b22bc5b64eb78",
+            "id": "@water_dirt",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@water"
+                    },
+                    "walking_speed": 0.7149999737739563
+                }
+            }
+        },
+        {
+            "path": "sounds/grass.ogg",
+            "file_hash": "6a3e30ed6b7f95873883179f7c3551d14c4a49e571e64ee6d408160f66a2f6a2",
+            "id": "@sounds/grass.ogg"
+        },
+        {
+            "path": "sounds/gravel.ogg",
+            "file_hash": "6a3e30ed6b7f95873883179f7c3551d14c4a49e571e64ee6d408160f66a2f6a2",
+            "id": "@gravel"
+        },
+        {
+            "path": "sounds/hair.ogg",
+            "file_hash": "620401a0367f63698b2f4cd55f430ed0b20ab9514470ea96761e430bfda2f6a2",
+            "id": "@hair",
+            "loop": true
+        },
+        {
+            "path": "sounds/stone.ogg",
+            "file_hash": "5a05c47c7b8dbf8e4e20c70c10d8b46cdd5a55b933f3703cbb6ad20154edf9d9",
+            "id": "@sounds/stone.ogg"
+        },
+        {
+            "path": "sounds/water.ogg",
+            "file_hash": "1854641534ccb465de1d184254f215dc188a85da9e2390ea4f444f45abcf42eb",
+            "id": "@water"
+        },
+        {
+            "path": "sounds/wood.ogg",
+            "file_hash": "1b8b9c4c5fd2d849c59677364444e92e26cff274fc3f6d56a97c90ad8a3f4587",
+            "id": "@wood"
+        }
+    ],
+    "layers": [
+        {
+            "id": "Layer 1"
+        },
+        {
+            "id": "Lobby",
+            "is_open_in_editor": false,
+            "nodes": [
+                "hair",
+                "title",
+                "nether_portal (1)"
+            ]
+        },
+        {
+            "id": "Spawns",
+            "is_open_in_editor": false,
+            "nodes": [
+                "team_spawn (2)",
+                "team_spawn"
+            ]
+        },
+        {
+            "id": "Foreground",
+            "is_open_in_editor": false,
+            "nodes": [
+                "oak_leaves (36)",
+                "oak_leaves (35)",
+                "oak_leaves (34)",
+                "oak_leaves (33)",
+                "oak_leaves (32)",
+                "oak_leaves (31)",
+                "oak_leaves (30)",
+                "oak_leaves (29)",
+                "oak_leaves (28)",
+                "oak_leaves (27)",
+                "oak_leaves (26)",
+                "oak_leaves (25)",
+                "oak_leaves (24)",
+                "oak_leaves (23)",
+                "oak_leaves (22)",
+                "oak_leaves (21)",
+                "oak_leaves (20)",
+                "oak_leaves (19)",
+                "oak_leaves (18)",
+                "oak_leaves (17)",
+                "oak_leaves (16)",
+                "oak_leaves (15)",
+                "oak_leaves (14)",
+                "oak_leaves (13)",
+                "oak_leaves (12)",
+                "oak_leaves (11)",
+                "oak_leaves (10)",
+                "oak_leaves (9)",
+                "oak_leaves (8)",
+                "oak_leaves (7)",
+                "oak_leaves (6)",
+                "oak_leaves (5)",
+                "oak_leaves (4)",
+                "oak_leaves (3)",
+                "oak_leaves (2)",
+                "oak_leaves (1)",
+                "oak_leaves"
+            ]
+        },
+        {
+            "id": "Foreground Secret",
+            "is_open_in_editor": false,
+            "tint": [106, 106, 106, 255],
+            "nodes": [
+                "fg_obsidian (1)",
+                "fg_obsidian (2)",
+                "fg_stone_wall (2)",
+                "fg_stone_wall (1)",
+                "fg_stone (4)",
+                "fg_stone (6)",
+                "fg_stone (3)",
+                "fg_stone (5)",
+                "fg_stone (2)",
+                "fg_stone_wall",
+                "fg_stone (1)",
+                "fg_stone"
+            ]
+        },
+        {
+            "id": "Special",
+            "is_open_in_editor": false,
+            "nodes": [
+                "portal (1)",
+                "portal (2)",
+                "portal",
+                "easteregg",
+                "hazard (7)",
+                "hazard (5)",
+                "hazard (4)",
+                "hazard (3)",
+                "hazard (6)",
+                "hazard (2)",
+                "hazard (1)",
+                "hazard (10)",
+                "hazard (9)",
+                "hazard (8)",
+                "hazard"
+            ]
+        },
+        {
+            "id": "Wall",
+            "is_open_in_editor": false,
+            "nodes": [
+                "stone_wall (83)",
+                "stop_wall_top (142)",
+                "stone_wall (85)",
+                "stone_wall (84)",
+                "stop_wall_top (143)",
+                "stop_wall_top (141)",
+                "stone_wall (82)",
+                "stone_wall (81)",
+                "stone_wall (79)",
+                "stop_wall_top (140)",
+                "stop_wall_top (139)",
+                "stone_wall (80)",
+                "stone_wall (78)",
+                "stop_wall_top (138)",
+                "stop_wall_top (137)",
+                "stop_wall_top (136)",
+                "stone_wall (77)",
+                "stone_wall (76)",
+                "stone_wall (75)",
+                "stone_wall (74)",
+                "noclip_stone (2)",
+                "noclip_stone (1)",
+                "noclip_stone",
+                "stone_wall (68)",
+                "stone_wall (70)",
+                "stone_wall (67)",
+                "stone_wall (69)",
+                "stone_wall (66)",
+                "stone_wall (73)",
+                "stone_wall (72)",
+                "stone_wall (71)",
+                "stone_wall (65)",
+                "stone_wall (64)",
+                "stone_wall (63)",
+                "stone_wall (62)",
+                "stone_wall (61)",
+                "stone_wall (60)",
+                "stone_wall (59)",
+                "stone_wall (58)",
+                "stone_wall (57)",
+                "stone_wall (56)",
+                "stone_wall (55)",
+                "stone_wall (54)",
+                "grass_wall (16)",
+                "grass_wall (15)",
+                "grass_wall (14)",
+                "grass_wall_top (26)",
+                "grass_wall_top (27)",
+                "grass_wall_top (25)",
+                "stone_wall (53)",
+                "stone_wall (52)",
+                "stone_wall (51)",
+                "stop_wall_top (110)",
+                "stop_wall_top (109)",
+                "stop_wall_top (123)",
+                "stop_wall_top (122)",
+                "stop_wall_top (121)",
+                "stop_wall_top (120)",
+                "stop_wall_top (135)",
+                "stop_wall_top (134)",
+                "stop_wall_top (133)",
+                "stop_wall_top (131)",
+                "stop_wall_top (125)",
+                "stop_wall_top (130)",
+                "stop_wall_top (132)",
+                "stop_wall_top (129)",
+                "stop_wall_top (128)",
+                "stop_wall_top (127)",
+                "stop_wall_top (126)",
+                "stop_wall_top (124)",
+                "stop_wall_top (119)",
+                "stop_wall_top (111)",
+                "stop_wall_top (118)",
+                "stop_wall_top (117)",
+                "stop_wall_top (116)",
+                "stop_wall_top (115)",
+                "stop_wall_top (114)",
+                "stop_wall_top (112)",
+                "stop_wall_top (113)",
+                "stop_wall_top (107)",
+                "stop_wall_top (108)",
+                "stop_wall_top (106)",
+                "stop_wall_top (105)",
+                "stop_wall_top (104)",
+                "stop_wall_top (103)",
+                "grass_wall (13)",
+                "grass_wall (12)",
+                "grass_wall (11)",
+                "grass_wall (10)",
+                "grass_wall (9)",
+                "grass_wall (8)",
+                "grass_wall (7)",
+                "noclip_grass_wall_top",
+                "grass_wall_top (3)",
+                "grass_wall_top (10)",
+                "grass_wall_top (13)",
+                "grass_wall_top (14)",
+                "grass_wall_top (18)",
+                "grass_wall_top (20)",
+                "grass_wall_top (19)",
+                "grass_wall_top (17)",
+                "grass_wall_top (16)",
+                "grass_wall_top (15)",
+                "grass_wall_top (12)",
+                "grass_wall_top (11)",
+                "grass_wall_top (9)",
+                "grass_wall_top (7)",
+                "grass_wall_top (8)",
+                "grass_wall_top (6)",
+                "grass_wall_top (5)",
+                "grass_wall_top (4)",
+                "grass_wall_top (29)",
+                "grass_wall_top (2)",
+                "grass_wall_top (28)",
+                "grass_wall_top (1)",
+                "grass_wall_top (23)",
+                "grass_wall_top (24)",
+                "grass_wall_top (22)",
+                "grass_wall_top (21)",
+                "grass_wall_top",
+                "grass_wall (4)",
+                "stone_wall (46)",
+                "stone_wall (45)",
+                "stop_wall_top (145)",
+                "stop_wall_top (144)",
+                "stop_wall_top (100)",
+                "stop_wall_top (99)",
+                "stop_wall_top (102)",
+                "stop_wall_top (101)",
+                "stop_wall_top (98)",
+                "stop_wall_top (97)",
+                "stop_wall_top (96)",
+                "stop_wall_top",
+                "stone_wall (47)",
+                "stone_wall (5)",
+                "stop_wall_top (6)",
+                "stop_wall_top (18)",
+                "stop_wall_top (67)",
+                "stop_wall_top (66)",
+                "stop_wall_top (65)",
+                "stop_wall_top (63)",
+                "stop_wall_top (62)",
+                "stop_wall_top (61)",
+                "stop_wall_top (17)",
+                "stop_wall_top (38)",
+                "stop_wall_top (37)",
+                "stop_wall_top (40)",
+                "stop_wall_top (39)",
+                "stop_wall_top (36)",
+                "stop_wall_top (51)",
+                "stop_wall_top (48)",
+                "stop_wall_top (55)",
+                "stop_wall_top (53)",
+                "stop_wall_top (73)",
+                "stop_wall_top (86)",
+                "stop_wall_top (72)",
+                "stop_wall_top (71)",
+                "stop_wall_top (70)",
+                "stop_wall_top (59)",
+                "stop_wall_top (60)",
+                "stop_wall_top (58)",
+                "stop_wall_top (56)",
+                "stop_wall_top (54)",
+                "stop_wall_top (52)",
+                "stop_wall_top (50)",
+                "stop_wall_top (49)",
+                "stop_wall_top (41)",
+                "stop_wall_top (34)",
+                "stop_wall_top (32)",
+                "stop_wall_top (27)",
+                "stop_wall_top (46)",
+                "stop_wall_top (45)",
+                "stop_wall_top (47)",
+                "stop_wall_top (44)",
+                "stop_wall_top (43)",
+                "stop_wall_top (42)",
+                "stop_wall_top (35)",
+                "stop_wall_top (33)",
+                "stop_wall_top (31)",
+                "stop_wall_top (77)",
+                "stop_wall_top (76)",
+                "stop_wall_top (79)",
+                "stop_wall_top (78)",
+                "stop_wall_top (75)",
+                "stop_wall_top (74)",
+                "stop_wall_top (57)",
+                "stop_wall_top (30)",
+                "stop_wall_top (29)",
+                "stop_wall_top (28)",
+                "stop_wall_top (26)",
+                "stop_wall_top (25)",
+                "stop_wall_top (24)",
+                "stop_wall_top (87)",
+                "stop_wall_top (23)",
+                "stop_wall_top (22)",
+                "stop_wall_top (21)",
+                "stop_wall_top (84)",
+                "stop_wall_top (85)",
+                "stop_wall_top (82)",
+                "stop_wall_top (83)",
+                "stop_wall_top (81)",
+                "stop_wall_top (80)",
+                "stop_wall_top (20)",
+                "stop_wall_top (19)",
+                "stop_wall_top (13)",
+                "stop_wall_top (15)",
+                "stop_wall_top (16)",
+                "stop_wall_top (14)",
+                "stop_wall_top (12)",
+                "stop_wall_top (11)",
+                "stop_wall_top (90)",
+                "stop_wall_top (89)",
+                "stop_wall_top (95)",
+                "stop_wall_top (94)",
+                "stop_wall_top (93)",
+                "stop_wall_top (5)",
+                "stop_wall_top (92)",
+                "stop_wall_top (91)",
+                "stop_wall_top (88)",
+                "stop_wall_top (4)",
+                "stop_wall_top (2)",
+                "stop_wall_top (10)",
+                "stop_wall_top (9)",
+                "stop_wall_top (8)",
+                "stop_wall_top (7)",
+                "stop_wall_top (3)",
+                "stop_wall_top (1)",
+                "stone_wall (14)",
+                "stone_wall (13)",
+                "stone_wall (16)",
+                "stone_wall (15)",
+                "stone_wall (19)",
+                "stone_wall (18)",
+                "stone_wall (34)",
+                "stone_wall (32)",
+                "stone_wall (31)",
+                "stone_wall (30)",
+                "stone_wall (29)",
+                "stone_wall (40)",
+                "stone_wall (39)",
+                "stone_wall (38)",
+                "stone_wall (37)",
+                "stone_wall (36)",
+                "stone_wall (35)",
+                "stone_wall (33)",
+                "stone_wall (28)",
+                "stone_wall (27)",
+                "stone_wall (26)",
+                "stone_wall (50)",
+                "stone_wall (49)",
+                "stone_wall (48)",
+                "stone_wall (44)",
+                "stone_wall (43)",
+                "stone_wall (42)",
+                "stone_wall (41)",
+                "stone_wall (25)",
+                "stone_wall (24)",
+                "stone_wall (23)",
+                "stone_wall (22)",
+                "stone_wall (21)",
+                "stop_wall_top (69)",
+                "stop_wall_top (68)",
+                "stop_wall_top (64)",
+                "stone_wall (20)",
+                "stone_wall (17)",
+                "stone_wall (12)",
+                "stone_wall (11)",
+                "stone_wall (10)",
+                "stone_wall (9)",
+                "stone_wall (8)",
+                "stone_wall (7)",
+                "stone_wall (6)",
+                "stone_wall (4)",
+                "stone_wall (3)",
+                "stone_wall (2)",
+                "stone_wall (86)",
+                "stone_wall (1)",
+                "stone_wall",
+                "grass_wall (6)",
+                "grass_wall (5)",
+                "grass_wall (3)",
+                "grass_wall (2)",
+                "grass_wall (1)",
+                "grass_wall",
+                "cobblestone_wall_top (2)",
+                "cobblestone_wall (5)",
+                "cobblestone_wall (4)",
+                "oak_log_top (11)",
+                "oak_log_top (10)",
+                "oak_log_top (9)",
+                "oak_log_top (8)",
+                "cobblestone_wall_top (1)",
+                "cobblestone_wall (3)",
+                "cobblestone_wall (2)",
+                "oak_log_top (7)",
+                "oak_log_top (6)",
+                "oak_log_top (5)",
+                "oak_log_top (4)",
+                "cobblestone_wall_top (5)",
+                "cobblestone_wall (11)",
+                "cobblestone_wall (10)",
+                "oak_log_top (23)",
+                "oak_log_top (22)",
+                "oak_log_top (21)",
+                "oak_log_top (20)",
+                "cobblestone_wall_top (4)",
+                "cobblestone_wall (9)",
+                "cobblestone_wall (8)",
+                "oak_log_top (19)",
+                "oak_log_top (18)",
+                "oak_log_top (17)",
+                "oak_log_top (16)",
+                "cobblestone_wall_top (3)",
+                "cobblestone_wall (7)",
+                "cobblestone_wall (6)",
+                "oak_log_top (15)",
+                "oak_log_top (14)",
+                "oak_log_top (13)",
+                "oak_log_top (12)",
+                "cobblestone_wall_top",
+                "cobblestone_wall (1)",
+                "cobblestone_wall",
+                "oak_log_top (3)",
+                "oak_log_top (2)",
+                "oak_log_top (30)",
+                "oak_log_top (60)",
+                "oak_log_top (34)",
+                "oak_log_top (57)",
+                "oak_log_top (56)",
+                "oak_log_top (55)",
+                "oak_log_top (54)",
+                "oak_log_top (53)",
+                "oak_log_top (52)",
+                "oak_log_top (51)",
+                "oak_log_top (50)",
+                "oak_log_top (49)",
+                "oak_log_top (58)",
+                "oak_log_top (48)",
+                "oak_log_top (59)",
+                "oak_log_top (47)",
+                "oak_log_top (46)",
+                "oak_log_top (45)",
+                "oak_log_top (44)",
+                "oak_log_top (43)",
+                "oak_log_top (42)",
+                "oak_log_top (41)",
+                "oak_log_top (40)",
+                "oak_log_top (39)",
+                "oak_log_top (38)",
+                "oak_log_top (37)",
+                "oak_log_top (36)",
+                "oak_log_top (35)",
+                "oak_log_top (33)",
+                "oak_log_top (32)",
+                "oak_log_top (29)",
+                "oak_log_top (31)",
+                "oak_log_top (28)",
+                "oak_log_top (27)",
+                "oak_log_top (26)",
+                "oak_log_top (25)",
+                "oak_log_top (24)",
+                "oak_log_top (1)",
+                "oak_log_top"
+            ]
+        },
+        {
+            "id": "Background",
+            "is_open_in_editor": false,
+            "tint": [96, 96, 96, 255],
+            "nodes": [
+                "nether_portal",
+                "bg_stone_wall (19)",
+                "bg_stone_wall (18)",
+                "bg_stone_wall (28)",
+                "bg_stone_wall (27)",
+                "bg_stone_wall (26)",
+                "bg_stone_wall (29)",
+                "bg_stone_wall (25)",
+                "bg_stone_wall (24)",
+                "bg_stone_wall (23)",
+                "bg_stone_wall (21)",
+                "bg_stone_wall (22)",
+                "bg_stone_wall (20)",
+                "bg_stone_wall (17)",
+                "bg_stone_wall (16)",
+                "grass (7)",
+                "dirt (9)",
+                "dirt (14)",
+                "dirt (10)",
+                "coarse_dirt (30)",
+                "coarse_dirt (29)",
+                "coarse_dirt (31)",
+                "coarse_dirt (28)",
+                "coarse_dirt (27)",
+                "coarse_dirt (26)",
+                "coarse_dirt (25)",
+                "coarse_dirt (24)",
+                "coarse_dirt (23)",
+                "coarse_dirt (17)",
+                "coarse_dirt (20)",
+                "coarse_dirt (22)",
+                "coarse_dirt (21)",
+                "coarse_dirt (19)",
+                "coarse_dirt (18)",
+                "coarse_dirt (16)",
+                "coarse_dirt (15)",
+                "coarse_dirt (10)",
+                "coarse_dirt (9)",
+                "coarse_dirt (8)",
+                "coarse_dirt (14)",
+                "coarse_dirt (13)",
+                "coarse_dirt (12)",
+                "coarse_dirt (11)",
+                "coarse_dirt (7)",
+                "coarse_dirt (6)",
+                "coarse_dirt (5)",
+                "coarse_dirt (4)",
+                "coarse_dirt (3)",
+                "coarse_dirt (2)",
+                "coarse_dirt (1)",
+                "coarse_dirt",
+                "stone (11)",
+                "stone (10)",
+                "dirt (12)",
+                "dirt (22)",
+                "dirt (36)",
+                "dirt (29)",
+                "dirt (28)",
+                "dirt (35)",
+                "dirt (34)",
+                "dirt (33)",
+                "dirt (32)",
+                "dirt (31)",
+                "dirt (30)",
+                "dirt (39)",
+                "dirt (43)",
+                "dirt (44)",
+                "dirt (42)",
+                "dirt (41)",
+                "dirt (40)",
+                "dirt (38)",
+                "dirt (37)",
+                "dirt (27)",
+                "dirt (20)",
+                "dirt (21)",
+                "dirt (19)",
+                "dirt (26)",
+                "dirt (25)",
+                "dirt (24)",
+                "dirt (23)",
+                "dirt (18)",
+                "dirt (17)",
+                "dirt (16)",
+                "dirt (15)",
+                "dirt (11)",
+                "dirt (13)",
+                "dirt (8)",
+                "oak_stairs (1)",
+                "oak_stairs (3)",
+                "oak_planks (3)",
+                "oak_stairs (5)",
+                "oak_planks (5)",
+                "oak_stairs (4)",
+                "oak_planks (4)",
+                "oak_stairs (2)",
+                "oak_planks (2)",
+                "oak_stairs",
+                "oak_planks (1)",
+                "oak_planks",
+                "dirt (1)",
+                "dirt",
+                "dirt_path (2)",
+                "dirt_path (1)",
+                "dirt (7)",
+                "dirt (6)",
+                "dirt (5)",
+                "dirt (4)",
+                "dirt (3)",
+                "dirt (2)",
+                "grass (2)",
+                "grass (1)",
+                "dirt_path (3)",
+                "dirt_path",
+                "bg_stone_wall (4)",
+                "water_dirt (13)",
+                "water_dirt (18)",
+                "water_dirt (20)",
+                "water_dirt (23)",
+                "water_dirt (19)",
+                "water_dirt (17)",
+                "water_dirt (16)",
+                "water_dirt (22)",
+                "water_dirt (15)",
+                "water_dirt (14)",
+                "water_dirt (12)",
+                "water_dirt (11)",
+                "water_dirt (10)",
+                "water_dirt (9)",
+                "water_dirt (8)",
+                "bg_stone_wall (13)",
+                "bg_stone_wall (15)",
+                "bg_stone_wall (14)",
+                "bg_stone_wall (12)",
+                "bg_stone_wall (11)",
+                "obsidian (1)",
+                "obsidian",
+                "stone (6)",
+                "stone (7)",
+                "stone (5)",
+                "lava (2)",
+                "lava (1)",
+                "lava",
+                "water_dirt (2)",
+                "water_dirt (1)",
+                "water_dirt (4)",
+                "water_dirt (3)",
+                "water_dirt (5)",
+                "water_dirt (6)",
+                "stone (2)",
+                "stone (3)",
+                "stone (4)",
+                "stone (1)",
+                "bg_stone_wall (3)",
+                "bg_stone_wall (1)",
+                "bg_stone_wall (2)",
+                "bg_stone_wall",
+                "water_dirt (7)",
+                "bg_stone_wall (10)",
+                "bg_grass_wall (5)",
+                "bg_grass_wall (4)",
+                "bg_grass_wall (3)",
+                "bg_grass_wall (2)",
+                "bg_grass_wall (1)",
+                "bg_grass_wall",
+                "grass (5)",
+                "grass (6)",
+                "grass (4)",
+                "grass (3)",
+                "water_dirt",
+                "water_dirt (21)",
+                "bg_stone_wall (7)",
+                "bg_stone_wall (6)",
+                "bg_stone_wall (9)",
+                "bg_stone_wall (8)",
+                "bg_stone_wall (5)"
+            ]
+        },
+        {
+            "id": "Bottom",
+            "is_open_in_editor": false,
+            "tint": [96, 96, 96, 255],
+            "selectable_on_scene": false,
+            "nodes": [
+                "stone (17)",
+                "stone (16)",
+                "stone (13)",
+                "stone (12)",
+                "stone (15)",
+                "stone (14)",
+                "stone (9)",
+                "stone (8)",
+                "stone",
+                "grass"
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "id": "grass",
+            "type": "@grass.png",
+            "pos": [-23552.0, -16896.0],
+            "size": [4096, 7168]
+        },
+        {
+            "id": "stone",
+            "type": "@stone.png",
+            "pos": [-19968.0, -16896.0],
+            "size": [3072, 7168]
+        },
+        {
+            "id": "water_dirt (1)",
+            "type": "@water_dirt",
+            "pos": [-21248.0, -18240.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "water_dirt (2)",
+            "type": "@water_dirt",
+            "pos": [-21120.0, -18176.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "water_dirt (3)",
+            "type": "@water_dirt",
+            "pos": [-21344.0, -18304.0],
+            "size": [64, 128]
+        },
+        {
+            "id": "water_dirt (4)",
+            "type": "@water_dirt",
+            "pos": [-21024.0, -18112.0],
+            "size": [64, 128]
+        },
+        {
+            "id": "water_dirt (5)",
+            "type": "@water_dirt",
+            "pos": [-20960.0, -18080.0]
+        },
+        {
+            "id": "water_dirt (6)",
+            "type": "@water_dirt",
+            "pos": [-20896.0, -18016.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "water_dirt (7)",
+            "type": "@water_dirt",
+            "pos": [-20736.0, -19232.0],
+            "size": [384, 320]
+        },
+        {
+            "id": "stone (1)",
+            "type": "@stone.png",
+            "pos": [-20896.0, -19168.0]
+        },
+        {
+            "id": "stone (2)",
+            "type": "@stone.png",
+            "pos": [-20832.0, -19104.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "stone (3)",
+            "type": "@stone.png",
+            "pos": [-20576.0, -19104.0]
+        },
+        {
+            "id": "bg_stone_wall",
+            "type": "@bg_stone_wall",
+            "pos": [-20896.0, -19360.0]
+        },
+        {
+            "id": "bg_stone_wall (1)",
+            "type": "@bg_stone_wall",
+            "pos": [-20800.0, -19424.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "bg_stone_wall (2)",
+            "type": "@bg_stone_wall",
+            "pos": [-20704.0, -19360.0]
+        },
+        {
+            "id": "bg_stone_wall (3)",
+            "type": "@bg_stone_wall",
+            "pos": [-20608.0, -19296.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone (4)",
+            "type": "@stone.png",
+            "pos": [-20608.0, -19360.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "bg_stone_wall (4)",
+            "type": "@bg_stone_wall",
+            "pos": [-21440.0, -18464.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "bg_stone_wall (5)",
+            "type": "@bg_stone_wall",
+            "pos": [-21344.0, -18400.0]
+        },
+        {
+            "id": "bg_stone_wall (6)",
+            "type": "@bg_stone_wall",
+            "pos": [-21248.0, -18336.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "bg_stone_wall (7)",
+            "type": "@bg_stone_wall",
+            "pos": [-21120.0, -18272.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "bg_stone_wall (8)",
+            "type": "@bg_stone_wall",
+            "pos": [-21024.0, -18208.0]
+        },
+        {
+            "id": "bg_stone_wall (9)",
+            "type": "@bg_stone_wall",
+            "pos": [-20960.0, -18144.0]
+        },
+        {
+            "id": "bg_stone_wall (10)",
+            "type": "@bg_stone_wall",
+            "pos": [-20864.0, -18080.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "lava",
+            "type": "@lava",
+            "pos": [-19904.0, -17888.0],
+            "size": [512, 448]
+        },
+        {
+            "id": "obsidian",
+            "type": "@obsidian",
+            "pos": [-20128.0, -18080.0],
+            "size": [64, 320]
+        },
+        {
+            "id": "obsidian (1)",
+            "type": "@obsidian",
+            "pos": [-20032.0, -17952.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone (5)",
+            "type": "@stone.png",
+            "pos": [-19872.0, -18016.0]
+        },
+        {
+            "id": "bg_stone_wall (11)",
+            "type": "@bg_stone_wall",
+            "pos": [-19936.0, -17888.0]
+        },
+        {
+            "id": "bg_stone_wall (12)",
+            "type": "@bg_stone_wall",
+            "pos": [-19872.0, -17952.0]
+        },
+        {
+            "id": "bg_stone_wall (13)",
+            "type": "@bg_stone_wall",
+            "pos": [-20096.0, -17824.0],
+            "size": [256, 64]
+        },
+        {
+            "id": "bg_stone_wall (14)",
+            "type": "@bg_stone_wall",
+            "pos": [-20256.0, -17888.0]
+        },
+        {
+            "id": "bg_stone_wall (15)",
+            "type": "@bg_stone_wall",
+            "pos": [-20352.0, -17952.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone (6)",
+            "type": "@stone.png",
+            "pos": [-20064.0, -17888.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "lava (1)",
+            "type": "@lava",
+            "pos": [-20288.0, -17888.0],
+            "size": [256, 192]
+        },
+        {
+            "id": "lava (2)",
+            "type": "@lava",
+            "pos": [-20224.0, -17760.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone (7)",
+            "type": "@stone.png",
+            "pos": [-20224.0, -17920.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "water_dirt (8)",
+            "type": "@water_dirt",
+            "pos": [-19552.0, -16256.0],
+            "size": [192, 128]
+        },
+        {
+            "id": "water_dirt (9)",
+            "type": "@water_dirt",
+            "pos": [-19712.0, -16192.0],
+            "size": [256, 128]
+        },
+        {
+            "id": "water_dirt (10)",
+            "type": "@water_dirt",
+            "pos": [-19968.0, -16128.0],
+            "size": [256, 128]
+        },
+        {
+            "id": "water_dirt (11)",
+            "type": "@water_dirt",
+            "pos": [-20096.0, -16064.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "water_dirt (12)",
+            "type": "@water_dirt",
+            "pos": [-20160.0, -15936.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "water_dirt (13)",
+            "type": "@water_dirt",
+            "pos": [-20224.0, -15680.0],
+            "size": [128, 512]
+        },
+        {
+            "id": "water_dirt (14)",
+            "type": "@water_dirt",
+            "pos": [-20288.0, -15360.0],
+            "size": [128, 256]
+        },
+        {
+            "id": "water_dirt (15)",
+            "type": "@water_dirt",
+            "pos": [-20352.0, -15232.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "water_dirt (16)",
+            "type": "@water_dirt",
+            "pos": [-20448.0, -15168.0],
+            "size": [192, 128]
+        },
+        {
+            "id": "water_dirt (17)",
+            "type": "@water_dirt",
+            "pos": [-20864.0, -14976.0],
+            "size": [256, 128]
+        },
+        {
+            "id": "water_dirt (18)",
+            "type": "@water_dirt",
+            "pos": [-21056.0, -14912.0],
+            "size": [384, 128]
+        },
+        {
+            "id": "water_dirt (19)",
+            "type": "@water_dirt",
+            "pos": [-20640.0, -15040.0],
+            "size": [192, 128]
+        },
+        {
+            "id": "water_dirt (20)",
+            "type": "@water_dirt",
+            "pos": [-21440.0, -14752.0],
+            "size": [128, 192]
+        },
+        {
+            "id": "dirt",
+            "type": "@dirt",
+            "pos": [-23968.0, -19104.0]
+        },
+        {
+            "id": "dirt_path",
+            "type": "@dirt_path",
+            "pos": [-24000.0, -19040.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "dirt_path (1)",
+            "type": "@dirt_path",
+            "pos": [-23968.0, -18976.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "dirt (1)",
+            "type": "@dirt",
+            "pos": [-24032.0, -18976.0]
+        },
+        {
+            "id": "dirt_path (2)",
+            "type": "@dirt_path",
+            "pos": [-24032.0, -18912.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "dirt_path (3)",
+            "type": "@dirt_path",
+            "pos": [-24000.0, -17696.0],
+            "size": [128, 2368]
+        },
+        {
+            "id": "dirt (2)",
+            "type": "@dirt",
+            "pos": [-24032.0, -16480.0]
+        },
+        {
+            "id": "grass (1)",
+            "type": "@grass.png",
+            "pos": [-24032.0, -16736.0]
+        },
+        {
+            "id": "grass (2)",
+            "type": "@grass.png",
+            "pos": [-23968.0, -16864.0]
+        },
+        {
+            "id": "dirt (3)",
+            "type": "@dirt",
+            "pos": [-24032.0, -16928.0]
+        },
+        {
+            "id": "dirt (4)",
+            "type": "@dirt",
+            "pos": [-24032.0, -17376.0]
+        },
+        {
+            "id": "dirt (5)",
+            "type": "@dirt",
+            "pos": [-23968.0, -17824.0]
+        },
+        {
+            "id": "dirt (6)",
+            "type": "@dirt",
+            "pos": [-24032.0, -18400.0]
+        },
+        {
+            "id": "dirt (7)",
+            "type": "@dirt",
+            "pos": [-23840.0, -18400.0]
+        },
+        {
+            "id": "oak_planks",
+            "type": "@oak_planks",
+            "pos": [-23648.0, -18592.0],
+            "size": [320, 320]
+        },
+        {
+            "id": "oak_planks (1)",
+            "type": "@oak_planks",
+            "pos": [-24352.0, -18592.0],
+            "size": [320, 320]
+        },
+        {
+            "id": "oak_stairs",
+            "type": "@oak_stairs",
+            "pos": [-24224.0, -18592.0],
+            "rotation": -90.0
+        },
+        {
+            "id": "oak_stairs (1)",
+            "type": "@oak_stairs",
+            "pos": [-23776.0, -18592.0],
+            "rotation": 90.0,
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_planks (2)",
+            "type": "@oak_planks",
+            "pos": [-24352.0, -18080.0],
+            "size": [320, 320]
+        },
+        {
+            "id": "oak_stairs (2)",
+            "type": "@oak_stairs",
+            "pos": [-24224.0, -18080.0],
+            "rotation": -90.0
+        },
+        {
+            "id": "oak_planks (3)",
+            "type": "@oak_planks",
+            "pos": [-24352.0, -17568.0],
+            "size": [320, 320]
+        },
+        {
+            "id": "oak_stairs (3)",
+            "type": "@oak_stairs",
+            "pos": [-24224.0, -17568.0],
+            "rotation": -90.0
+        },
+        {
+            "id": "oak_planks (4)",
+            "type": "@oak_planks",
+            "pos": [-23648.0, -18080.0],
+            "size": [320, 320],
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_stairs (4)",
+            "type": "@oak_stairs",
+            "pos": [-23776.0, -18080.0],
+            "rotation": 90.0,
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_planks (5)",
+            "type": "@oak_planks",
+            "pos": [-23648.0, -17568.0],
+            "size": [320, 320],
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_stairs (5)",
+            "type": "@oak_stairs",
+            "pos": [-23776.0, -17568.0],
+            "rotation": 90.0,
+            "flip_horizontally": true
+        },
+        {
+            "id": "water_dirt (21)",
+            "type": "@water_dirt",
+            "pos": [-21600.0, -18400.0],
+            "size": [448, 192]
+        },
+        {
+            "id": "water_dirt",
+            "type": "@water_dirt",
+            "pos": [-21952.0, -18560.0],
+            "size": [384, 384]
+        },
+        {
+            "id": "bg_grass_wall",
+            "type": "@bg_grass_wall",
+            "pos": [-22112.0, -18656.0]
+        },
+        {
+            "id": "bg_grass_wall (1)",
+            "type": "@bg_grass_wall",
+            "pos": [-22048.0, -18720.0]
+        },
+        {
+            "id": "grass (3)",
+            "type": "@grass.png",
+            "pos": [-22112.0, -18720.0]
+        },
+        {
+            "id": "bg_grass_wall (2)",
+            "type": "@bg_grass_wall",
+            "pos": [-21792.0, -18720.0]
+        },
+        {
+            "id": "bg_grass_wall (3)",
+            "type": "@bg_grass_wall",
+            "pos": [-21792.0, -18592.0]
+        },
+        {
+            "id": "bg_grass_wall (4)",
+            "type": "@bg_grass_wall",
+            "pos": [-21696.0, -18528.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "bg_grass_wall (5)",
+            "type": "@bg_grass_wall",
+            "pos": [-21920.0, -18784.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "grass (4)",
+            "type": "@grass.png",
+            "pos": [-22112.0, -18464.0]
+        },
+        {
+            "id": "grass (5)",
+            "type": "@grass.png",
+            "pos": [-22080.0, -18400.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "grass (6)",
+            "type": "@grass.png",
+            "pos": [-21856.0, -18400.0]
+        },
+        {
+            "id": "stone (8)",
+            "type": "@stone.png",
+            "pos": [-23552.0, -14720.0],
+            "size": [4096, 2816]
+        },
+        {
+            "id": "stone (9)",
+            "type": "@stone.png",
+            "pos": [-22016.0, -16640.0],
+            "size": [1024, 1024]
+        },
+        {
+            "id": "dirt (8)",
+            "type": "@dirt",
+            "pos": [-21920.0, -17376.0]
+        },
+        {
+            "id": "dirt (9)",
+            "type": "@dirt",
+            "pos": [-22048.0, -17312.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "dirt (10)",
+            "type": "@dirt",
+            "pos": [-22208.0, -17376.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "dirt (11)",
+            "type": "@dirt",
+            "pos": [-22176.0, -17248.0]
+        },
+        {
+            "id": "dirt (12)",
+            "type": "@dirt",
+            "pos": [-22112.0, -17184.0]
+        },
+        {
+            "id": "coarse_dirt",
+            "type": "@coarse_dirt",
+            "pos": [-22112.0, -17248.0]
+        },
+        {
+            "id": "coarse_dirt (1)",
+            "type": "@coarse_dirt",
+            "pos": [-22048.0, -17184.0]
+        },
+        {
+            "id": "coarse_dirt (2)",
+            "type": "@coarse_dirt",
+            "pos": [-21984.0, -17248.0]
+        },
+        {
+            "id": "dirt (13)",
+            "type": "@dirt",
+            "pos": [-21920.0, -17248.0]
+        },
+        {
+            "id": "stone (10)",
+            "type": "@stone.png",
+            "pos": [-22176.0, -17184.0]
+        },
+        {
+            "id": "stone (11)",
+            "type": "@stone.png",
+            "pos": [-21984.0, -17184.0]
+        },
+        {
+            "id": "coarse_dirt (3)",
+            "type": "@coarse_dirt",
+            "pos": [-22304.0, -17440.0]
+        },
+        {
+            "id": "dirt (14)",
+            "type": "@dirt",
+            "pos": [-22336.0, -17504.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "coarse_dirt (4)",
+            "type": "@coarse_dirt",
+            "pos": [-22432.0, -17568.0]
+        },
+        {
+            "id": "coarse_dirt (5)",
+            "type": "@coarse_dirt",
+            "pos": [-22496.0, -17504.0]
+        },
+        {
+            "id": "dirt (15)",
+            "type": "@dirt",
+            "pos": [-22432.0, -17440.0]
+        },
+        {
+            "id": "dirt (16)",
+            "type": "@dirt",
+            "pos": [-22624.0, -17568.0]
+        },
+        {
+            "id": "dirt (17)",
+            "type": "@dirt",
+            "pos": [-22560.0, -17632.0]
+        },
+        {
+            "id": "coarse_dirt (6)",
+            "type": "@coarse_dirt",
+            "pos": [-22624.0, -17632.0]
+        },
+        {
+            "id": "dirt (18)",
+            "type": "@dirt",
+            "pos": [-22752.0, -17696.0]
+        },
+        {
+            "id": "dirt (19)",
+            "type": "@dirt",
+            "pos": [-22688.0, -17760.0]
+        },
+        {
+            "id": "dirt (20)",
+            "type": "@dirt",
+            "pos": [-22624.0, -17824.0]
+        },
+        {
+            "id": "coarse_dirt (7)",
+            "type": "@coarse_dirt",
+            "pos": [-22816.0, -17632.0]
+        },
+        {
+            "id": "dirt (21)",
+            "type": "@dirt",
+            "pos": [-22752.0, -17824.0]
+        },
+        {
+            "id": "coarse_dirt (8)",
+            "type": "@coarse_dirt",
+            "pos": [-22688.0, -17888.0]
+        },
+        {
+            "id": "coarse_dirt (9)",
+            "type": "@coarse_dirt",
+            "pos": [-22560.0, -17952.0]
+        },
+        {
+            "id": "dirt (22)",
+            "type": "@dirt",
+            "pos": [-22656.0, -18016.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "coarse_dirt (10)",
+            "type": "@coarse_dirt",
+            "pos": [-22688.0, -18080.0]
+        },
+        {
+            "id": "dirt (23)",
+            "type": "@dirt",
+            "pos": [-22944.0, -17696.0]
+        },
+        {
+            "id": "coarse_dirt (11)",
+            "type": "@coarse_dirt",
+            "pos": [-23072.0, -17632.0]
+        },
+        {
+            "id": "dirt (24)",
+            "type": "@dirt",
+            "pos": [-23072.0, -17760.0]
+        },
+        {
+            "id": "coarse_dirt (12)",
+            "type": "@coarse_dirt",
+            "pos": [-23200.0, -17760.0]
+        },
+        {
+            "id": "dirt (25)",
+            "type": "@dirt",
+            "pos": [-23200.0, -17696.0]
+        },
+        {
+            "id": "dirt (26)",
+            "type": "@dirt",
+            "pos": [-23328.0, -17824.0]
+        },
+        {
+            "id": "coarse_dirt (13)",
+            "type": "@coarse_dirt",
+            "pos": [-23392.0, -17824.0]
+        },
+        {
+            "id": "coarse_dirt (14)",
+            "type": "@coarse_dirt",
+            "pos": [-23520.0, -17760.0]
+        },
+        {
+            "id": "coarse_dirt (15)",
+            "type": "@coarse_dirt",
+            "pos": [-22624.0, -18208.0]
+        },
+        {
+            "id": "dirt (27)",
+            "type": "@dirt",
+            "pos": [-22688.0, -18208.0]
+        },
+        {
+            "id": "coarse_dirt (16)",
+            "type": "@coarse_dirt",
+            "pos": [-22560.0, -18272.0]
+        },
+        {
+            "id": "coarse_dirt (17)",
+            "type": "@coarse_dirt",
+            "pos": [-22368.0, -18336.0]
+        },
+        {
+            "id": "dirt (28)",
+            "type": "@dirt",
+            "pos": [-22688.0, -18336.0]
+        },
+        {
+            "id": "coarse_dirt (18)",
+            "type": "@coarse_dirt",
+            "pos": [-22688.0, -18400.0]
+        },
+        {
+            "id": "dirt (29)",
+            "type": "@dirt",
+            "pos": [-22752.0, -18432.0],
+            "size": [64, 128]
+        },
+        {
+            "id": "dirt (30)",
+            "type": "@dirt",
+            "pos": [-22880.0, -18336.0]
+        },
+        {
+            "id": "dirt (31)",
+            "type": "@dirt",
+            "pos": [-22944.0, -18400.0]
+        },
+        {
+            "id": "dirt (32)",
+            "type": "@dirt",
+            "pos": [-23008.0, -18336.0]
+        },
+        {
+            "id": "coarse_dirt (19)",
+            "type": "@coarse_dirt",
+            "pos": [-23072.0, -18400.0]
+        },
+        {
+            "id": "coarse_dirt (20)",
+            "type": "@coarse_dirt",
+            "pos": [-23072.0, -18272.0]
+        },
+        {
+            "id": "dirt (33)",
+            "type": "@dirt",
+            "pos": [-23200.0, -18400.0]
+        },
+        {
+            "id": "dirt (34)",
+            "type": "@dirt",
+            "pos": [-23264.0, -18336.0]
+        },
+        {
+            "id": "coarse_dirt (21)",
+            "type": "@coarse_dirt",
+            "pos": [-23200.0, -18272.0]
+        },
+        {
+            "id": "coarse_dirt (22)",
+            "type": "@coarse_dirt",
+            "pos": [-23392.0, -18336.0]
+        },
+        {
+            "id": "dirt (35)",
+            "type": "@dirt",
+            "pos": [-23584.0, -18272.0]
+        },
+        {
+            "id": "dirt (36)",
+            "type": "@dirt",
+            "pos": [-22560.0, -18496.0],
+            "size": [64, 256]
+        },
+        {
+            "id": "dirt (37)",
+            "type": "@dirt",
+            "pos": [-22624.0, -18528.0]
+        },
+        {
+            "id": "coarse_dirt (23)",
+            "type": "@coarse_dirt",
+            "pos": [-22560.0, -18464.0]
+        },
+        {
+            "id": "dirt (38)",
+            "type": "@dirt",
+            "pos": [-22496.0, -18656.0]
+        },
+        {
+            "id": "coarse_dirt (24)",
+            "type": "@coarse_dirt",
+            "pos": [-22432.0, -18592.0]
+        },
+        {
+            "id": "dirt (39)",
+            "type": "@dirt",
+            "pos": [-22432.0, -18752.0],
+            "size": [64, 128]
+        },
+        {
+            "id": "dirt (40)",
+            "type": "@dirt",
+            "pos": [-22368.0, -18784.0]
+        },
+        {
+            "id": "coarse_dirt (25)",
+            "type": "@coarse_dirt",
+            "pos": [-22368.0, -18848.0]
+        },
+        {
+            "id": "dirt (41)",
+            "type": "@dirt",
+            "pos": [-22240.0, -18848.0]
+        },
+        {
+            "id": "dirt (42)",
+            "type": "@dirt",
+            "pos": [-22240.0, -18976.0]
+        },
+        {
+            "id": "coarse_dirt (26)",
+            "type": "@coarse_dirt",
+            "pos": [-22176.0, -18976.0]
+        },
+        {
+            "id": "dirt (43)",
+            "type": "@dirt",
+            "pos": [-22144.0, -19040.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "coarse_dirt (27)",
+            "type": "@coarse_dirt",
+            "pos": [-22048.0, -19040.0]
+        },
+        {
+            "id": "coarse_dirt (28)",
+            "type": "@coarse_dirt",
+            "pos": [-22112.0, -19104.0]
+        },
+        {
+            "id": "coarse_dirt (29)",
+            "type": "@coarse_dirt",
+            "pos": [-21984.0, -19104.0]
+        },
+        {
+            "id": "coarse_dirt (30)",
+            "type": "@coarse_dirt",
+            "pos": [-21984.0, -19168.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "dirt (44)",
+            "type": "@dirt",
+            "pos": [-22048.0, -19104.0]
+        },
+        {
+            "id": "coarse_dirt (31)",
+            "type": "@coarse_dirt",
+            "pos": [-22048.0, -19232.0]
+        },
+        {
+            "id": "stone (12)",
+            "type": "@stone.png",
+            "pos": [-21760.0, -19296.0],
+            "size": [512, 320]
+        },
+        {
+            "id": "stone (13)",
+            "type": "@stone.png",
+            "pos": [-21568.0, -18048.0],
+            "size": [128, 512]
+        },
+        {
+            "id": "oak_log_top",
+            "type": "@oak_log_top",
+            "pos": [-24480.0, -18720.0]
+        },
+        {
+            "id": "oak_log_top (1)",
+            "type": "@oak_log_top",
+            "pos": [-24224.0, -18720.0]
+        },
+        {
+            "id": "oak_log_top (2)",
+            "type": "@oak_log_top",
+            "pos": [-24480.0, -18464.0]
+        },
+        {
+            "id": "oak_log_top (3)",
+            "type": "@oak_log_top",
+            "pos": [-24224.0, -18464.0]
+        },
+        {
+            "id": "cobblestone_wall",
+            "type": "@cobblestone_wall",
+            "pos": [-24352.0, -18720.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "cobblestone_wall (1)",
+            "type": "@cobblestone_wall",
+            "pos": [-24352.0, -18464.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "cobblestone_wall_top",
+            "type": "@cobblestone_wall_top",
+            "pos": [-24480.0, -18592.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "oak_log_top (4)",
+            "type": "@oak_log_top",
+            "pos": [-24480.0, -18208.0]
+        },
+        {
+            "id": "oak_log_top (5)",
+            "type": "@oak_log_top",
+            "pos": [-24224.0, -18208.0]
+        },
+        {
+            "id": "oak_log_top (6)",
+            "type": "@oak_log_top",
+            "pos": [-24480.0, -17952.0]
+        },
+        {
+            "id": "oak_log_top (7)",
+            "type": "@oak_log_top",
+            "pos": [-24224.0, -17952.0]
+        },
+        {
+            "id": "cobblestone_wall (2)",
+            "type": "@cobblestone_wall",
+            "pos": [-24352.0, -18208.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "cobblestone_wall (3)",
+            "type": "@cobblestone_wall",
+            "pos": [-24352.0, -17952.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "cobblestone_wall_top (1)",
+            "type": "@cobblestone_wall_top",
+            "pos": [-24480.0, -18080.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "oak_log_top (8)",
+            "type": "@oak_log_top",
+            "pos": [-24480.0, -17696.0]
+        },
+        {
+            "id": "oak_log_top (9)",
+            "type": "@oak_log_top",
+            "pos": [-24224.0, -17696.0]
+        },
+        {
+            "id": "oak_log_top (10)",
+            "type": "@oak_log_top",
+            "pos": [-24480.0, -17440.0]
+        },
+        {
+            "id": "oak_log_top (11)",
+            "type": "@oak_log_top",
+            "pos": [-24224.0, -17440.0]
+        },
+        {
+            "id": "cobblestone_wall (4)",
+            "type": "@cobblestone_wall",
+            "pos": [-24352.0, -17696.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "cobblestone_wall (5)",
+            "type": "@cobblestone_wall",
+            "pos": [-24352.0, -17440.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "cobblestone_wall_top (2)",
+            "type": "@cobblestone_wall_top",
+            "pos": [-24480.0, -17568.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "oak_log_top (12)",
+            "type": "@oak_log_top",
+            "pos": [-23520.0, -18720.0],
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_log_top (13)",
+            "type": "@oak_log_top",
+            "pos": [-23776.0, -18720.0],
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_log_top (14)",
+            "type": "@oak_log_top",
+            "pos": [-23520.0, -18464.0],
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_log_top (15)",
+            "type": "@oak_log_top",
+            "pos": [-23776.0, -18464.0],
+            "flip_horizontally": true
+        },
+        {
+            "id": "cobblestone_wall (6)",
+            "type": "@cobblestone_wall",
+            "pos": [-23648.0, -18720.0],
+            "size": [192, 64],
+            "flip_horizontally": true
+        },
+        {
+            "id": "cobblestone_wall (7)",
+            "type": "@cobblestone_wall",
+            "pos": [-23648.0, -18464.0],
+            "size": [192, 64],
+            "flip_horizontally": true
+        },
+        {
+            "id": "cobblestone_wall_top (3)",
+            "type": "@cobblestone_wall_top",
+            "pos": [-23520.0, -18592.0],
+            "size": [64, 192],
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_log_top (16)",
+            "type": "@oak_log_top",
+            "pos": [-23520.0, -18208.0],
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_log_top (17)",
+            "type": "@oak_log_top",
+            "pos": [-23776.0, -18208.0],
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_log_top (18)",
+            "type": "@oak_log_top",
+            "pos": [-23520.0, -17952.0],
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_log_top (19)",
+            "type": "@oak_log_top",
+            "pos": [-23776.0, -17952.0],
+            "flip_horizontally": true
+        },
+        {
+            "id": "cobblestone_wall (8)",
+            "type": "@cobblestone_wall",
+            "pos": [-23648.0, -18208.0],
+            "size": [192, 64],
+            "flip_horizontally": true
+        },
+        {
+            "id": "cobblestone_wall (9)",
+            "type": "@cobblestone_wall",
+            "pos": [-23648.0, -17952.0],
+            "size": [192, 64],
+            "flip_horizontally": true
+        },
+        {
+            "id": "cobblestone_wall_top (4)",
+            "type": "@cobblestone_wall_top",
+            "pos": [-23520.0, -18080.0],
+            "size": [64, 192],
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_log_top (20)",
+            "type": "@oak_log_top",
+            "pos": [-23520.0, -17696.0],
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_log_top (21)",
+            "type": "@oak_log_top",
+            "pos": [-23776.0, -17696.0],
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_log_top (22)",
+            "type": "@oak_log_top",
+            "pos": [-23520.0, -17440.0],
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_log_top (23)",
+            "type": "@oak_log_top",
+            "pos": [-23776.0, -17440.0],
+            "flip_horizontally": true
+        },
+        {
+            "id": "cobblestone_wall (10)",
+            "type": "@cobblestone_wall",
+            "pos": [-23648.0, -17696.0],
+            "size": [192, 64],
+            "flip_horizontally": true
+        },
+        {
+            "id": "cobblestone_wall (11)",
+            "type": "@cobblestone_wall",
+            "pos": [-23648.0, -17440.0],
+            "size": [192, 64],
+            "flip_horizontally": true
+        },
+        {
+            "id": "cobblestone_wall_top (5)",
+            "type": "@cobblestone_wall_top",
+            "pos": [-23520.0, -17568.0],
+            "size": [64, 192],
+            "flip_horizontally": true
+        },
+        {
+            "id": "oak_log_top (24)",
+            "type": "@oak_log_top",
+            "pos": [-24096.0, -19040.0]
+        },
+        {
+            "id": "oak_log_top (25)",
+            "type": "@oak_log_top",
+            "pos": [-24352.0, -18912.0]
+        },
+        {
+            "id": "oak_log_top (26)",
+            "type": "@oak_log_top",
+            "pos": [-23648.0, -18976.0]
+        },
+        {
+            "id": "oak_log_top (27)",
+            "type": "@oak_log_top",
+            "pos": [-23264.0, -18656.0]
+        },
+        {
+            "id": "oak_log_top (28)",
+            "type": "@oak_log_top",
+            "pos": [-23072.0, -18784.0]
+        },
+        {
+            "id": "oak_log_top (29)",
+            "type": "@oak_log_top",
+            "pos": [-22880.0, -18912.0]
+        },
+        {
+            "id": "oak_log_top (30)",
+            "type": "@oak_log_top",
+            "pos": [-22560.0, -19040.0]
+        },
+        {
+            "id": "oak_log_top (31)",
+            "type": "@oak_log_top",
+            "pos": [-23200.0, -19040.0]
+        },
+        {
+            "id": "oak_log_top (32)",
+            "type": "@oak_log_top",
+            "pos": [-22816.0, -18528.0]
+        },
+        {
+            "id": "grass_wall",
+            "type": "@grass_wall",
+            "pos": [-23840.0, -19168.0],
+            "size": [576, 64]
+        },
+        {
+            "id": "grass_wall (1)",
+            "type": "@grass_wall",
+            "pos": [-23456.0, -19232.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "grass_wall (2)",
+            "type": "@grass_wall",
+            "pos": [-23296.0, -19296.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "grass_wall (3)",
+            "type": "@grass_wall",
+            "pos": [-23040.0, -19232.0],
+            "size": [384, 64]
+        },
+        {
+            "id": "grass_wall (4)",
+            "type": "@grass_wall",
+            "pos": [-22752.0, -19168.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "grass_wall (5)",
+            "type": "@grass_wall",
+            "pos": [-22496.0, -19232.0],
+            "size": [320, 64]
+        },
+        {
+            "id": "grass_wall (6)",
+            "type": "@grass_wall",
+            "pos": [-22240.0, -19296.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "stone_wall",
+            "type": "@stone_wall",
+            "pos": [-22080.0, -19296.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stop_wall_top",
+            "type": "@stop_wall_top",
+            "pos": [-22080.0, -19392.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "stone_wall (1)",
+            "type": "@stone_wall",
+            "pos": [-21792.0, -19424.0],
+            "size": [320, 64]
+        },
+        {
+            "id": "stone_wall (2)",
+            "type": "@stone_wall",
+            "pos": [-21568.0, -19360.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (3)",
+            "type": "@stone_wall",
+            "pos": [-21472.0, -19424.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (4)",
+            "type": "@stone_wall",
+            "pos": [-21408.0, -19488.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (5)",
+            "type": "@stone_wall",
+            "pos": [-20960.0, -19552.0],
+            "size": [832, 64]
+        },
+        {
+            "id": "stone_wall (6)",
+            "type": "@stone_wall",
+            "pos": [-20480.0, -19488.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (7)",
+            "type": "@stone_wall",
+            "pos": [-20320.0, -19424.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "stop_wall_top (1)",
+            "type": "@stop_wall_top",
+            "pos": [-20128.0, -19296.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "stone_wall (8)",
+            "type": "@stone_wall",
+            "pos": [-20192.0, -19360.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (9)",
+            "type": "@stone_wall",
+            "pos": [-20128.0, -19168.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (2)",
+            "type": "@stop_wall_top",
+            "pos": [-20064.0, -19232.0],
+            "size": [64, 320]
+        },
+        {
+            "id": "stone_wall (10)",
+            "type": "@stone_wall",
+            "pos": [-20064.0, -19040.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (3)",
+            "type": "@stop_wall_top",
+            "pos": [-19808.0, -18912.0],
+            "size": [448, 1344]
+        },
+        {
+            "id": "stop_wall_top (4)",
+            "type": "@stop_wall_top",
+            "pos": [-20064.0, -18528.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (5)",
+            "type": "@stop_wall_top",
+            "pos": [-20096.0, -18400.0],
+            "size": [128, 192]
+        },
+        {
+            "id": "stop_wall_top (6)",
+            "type": "@stop_wall_top",
+            "pos": [-20192.0, -18400.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (11)",
+            "type": "@stone_wall",
+            "pos": [-20192.0, -18336.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (12)",
+            "type": "@stone_wall",
+            "pos": [-20128.0, -18272.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (13)",
+            "type": "@stone_wall",
+            "pos": [-20032.0, -18208.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (14)",
+            "type": "@stone_wall",
+            "pos": [-19872.0, -18144.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "stone_wall (15)",
+            "type": "@stone_wall",
+            "pos": [-19744.0, -18080.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (7)",
+            "type": "@stop_wall_top",
+            "pos": [-19680.0, -18016.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (16)",
+            "type": "@stone_wall",
+            "pos": [-19680.0, -17952.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (8)",
+            "type": "@stop_wall_top",
+            "pos": [-19616.0, -17824.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "stop_wall_top (9)",
+            "type": "@stop_wall_top",
+            "pos": [-19648.0, -17696.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stop_wall_top (10)",
+            "type": "@stop_wall_top",
+            "pos": [-19936.0, -17632.0],
+            "size": [1600, 64]
+        },
+        {
+            "id": "stop_wall_top (11)",
+            "type": "@stop_wall_top",
+            "pos": [-20480.0, -17696.0],
+            "size": [640, 64]
+        },
+        {
+            "id": "stop_wall_top (12)",
+            "type": "@stop_wall_top",
+            "pos": [-20608.0, -17760.0],
+            "size": [640, 64]
+        },
+        {
+            "id": "stop_wall_top (13)",
+            "type": "@stop_wall_top",
+            "pos": [-20448.0, -17824.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (14)",
+            "type": "@stop_wall_top",
+            "pos": [-20800.0, -17856.0],
+            "size": [640, 128]
+        },
+        {
+            "id": "stop_wall_top (15)",
+            "type": "@stop_wall_top",
+            "pos": [-20832.0, -17952.0],
+            "size": [448, 64]
+        },
+        {
+            "id": "stop_wall_top (16)",
+            "type": "@stop_wall_top",
+            "pos": [-21152.0, -17888.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (17)",
+            "type": "@stone_wall",
+            "pos": [-21152.0, -17824.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (18)",
+            "type": "@stone_wall",
+            "pos": [-21024.0, -17760.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "stone_wall (19)",
+            "type": "@stone_wall",
+            "pos": [-20864.0, -17696.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (20)",
+            "type": "@stone_wall",
+            "pos": [-20768.0, -17632.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (21)",
+            "type": "@stone_wall",
+            "pos": [-20704.0, -17568.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (17)",
+            "type": "@stop_wall_top",
+            "pos": [-20640.0, -17536.0],
+            "size": [64, 128]
+        },
+        {
+            "id": "stone_wall (22)",
+            "type": "@stone_wall",
+            "pos": [-20640.0, -17440.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (18)",
+            "type": "@stop_wall_top",
+            "pos": [-19872.0, -17376.0],
+            "size": [1472, 448]
+        },
+        {
+            "id": "stone_wall (23)",
+            "type": "@stone_wall",
+            "pos": [-20576.0, -17120.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (19)",
+            "type": "@stop_wall_top",
+            "pos": [-20512.0, -17088.0],
+            "size": [64, 128]
+        },
+        {
+            "id": "stone_wall (24)",
+            "type": "@stone_wall",
+            "pos": [-20512.0, -16992.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (25)",
+            "type": "@stone_wall",
+            "pos": [-20448.0, -16928.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (26)",
+            "type": "@stone_wall",
+            "pos": [-20384.0, -16864.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (27)",
+            "type": "@stone_wall",
+            "pos": [-20320.0, -16800.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (28)",
+            "type": "@stone_wall",
+            "pos": [-20256.0, -16736.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (29)",
+            "type": "@stone_wall",
+            "pos": [-20160.0, -16672.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (30)",
+            "type": "@stone_wall",
+            "pos": [-20032.0, -16608.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (31)",
+            "type": "@stone_wall",
+            "pos": [-19904.0, -16544.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (32)",
+            "type": "@stone_wall",
+            "pos": [-19776.0, -16480.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (33)",
+            "type": "@stone_wall",
+            "pos": [-19680.0, -16416.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (34)",
+            "type": "@stone_wall",
+            "pos": [-19584.0, -16352.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (35)",
+            "type": "@stone_wall",
+            "pos": [-19488.0, -16288.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (36)",
+            "type": "@stone_wall",
+            "pos": [-19424.0, -16224.0009765625],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (37)",
+            "type": "@stone_wall",
+            "pos": [-19360.0, -16160.0009765625],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (20)",
+            "type": "@stop_wall_top",
+            "pos": [-19232.0, -16320.0],
+            "size": [192, 512]
+        },
+        {
+            "id": "stone_wall (38)",
+            "type": "@stone_wall",
+            "pos": [-19296.0, -16032.0009765625],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (21)",
+            "type": "@stop_wall_top",
+            "pos": [-19200.0, -15967.9990234375],
+            "size": [128, 192]
+        },
+        {
+            "id": "stone_wall (39)",
+            "type": "@stone_wall",
+            "pos": [-19232.0, -15839.9990234375],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (22)",
+            "type": "@stop_wall_top",
+            "pos": [-19168.0, -15775.9990234375],
+            "size": [64, 192]
+        },
+        {
+            "id": "stone_wall (40)",
+            "type": "@stone_wall",
+            "pos": [-19168.0, -15648.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (23)",
+            "type": "@stop_wall_top",
+            "pos": [-18784.0, -15903.9990234375],
+            "size": [704, 3520]
+        },
+        {
+            "id": "stop_wall_top (24)",
+            "type": "@stop_wall_top",
+            "pos": [-19168.0, -15072.0],
+            "size": [64, 320]
+        },
+        {
+            "id": "stop_wall_top (25)",
+            "type": "@stop_wall_top",
+            "pos": [-19232.0, -15008.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "stop_wall_top (26)",
+            "type": "@stop_wall_top",
+            "pos": [-19296.0, -14944.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (27)",
+            "type": "@stop_wall_top",
+            "pos": [-19296.0, -14816.0],
+            "size": [320, 192]
+        },
+        {
+            "id": "stop_wall_top (28)",
+            "type": "@stop_wall_top",
+            "pos": [-19488.0, -14784.0],
+            "size": [64, 128]
+        },
+        {
+            "id": "stop_wall_top (29)",
+            "type": "@stop_wall_top",
+            "pos": [-19552.0, -14752.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (30)",
+            "type": "@stop_wall_top",
+            "pos": [-19392.0, -14432.0009765625],
+            "size": [512, 576]
+        },
+        {
+            "id": "stop_wall_top (31)",
+            "type": "@stop_wall_top",
+            "pos": [-19680.0, -14624.0009765625],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (32)",
+            "type": "@stop_wall_top",
+            "pos": [-19744.0, -14528.0],
+            "size": [192, 128]
+        },
+        {
+            "id": "stop_wall_top (33)",
+            "type": "@stop_wall_top",
+            "pos": [-19872.0, -14496.0009765625],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (34)",
+            "type": "@stop_wall_top",
+            "pos": [-19840.0, -14303.9990234375],
+            "size": [384, 320]
+        },
+        {
+            "id": "stop_wall_top (35)",
+            "type": "@stop_wall_top",
+            "pos": [-20064.0, -14367.9990234375],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (36)",
+            "type": "@stop_wall_top",
+            "pos": [-20160.0, -14239.9990234375],
+            "size": [256, 192]
+        },
+        {
+            "id": "stop_wall_top (37)",
+            "type": "@stop_wall_top",
+            "pos": [-20384.0, -14239.9990234375],
+            "size": [192, 64]
+        },
+        {
+            "id": "stop_wall_top (38)",
+            "type": "@stop_wall_top",
+            "pos": [-20416.0, -14208.0],
+            "size": [256, 128]
+        },
+        {
+            "id": "stop_wall_top (39)",
+            "type": "@stop_wall_top",
+            "pos": [-20640.0, -14175.9990234375],
+            "size": [192, 64]
+        },
+        {
+            "id": "stop_wall_top (40)",
+            "type": "@stop_wall_top",
+            "pos": [-21088.0, -14208.0],
+            "size": [704, 128]
+        },
+        {
+            "id": "stop_wall_top (41)",
+            "type": "@stop_wall_top",
+            "pos": [-21184.0, -14303.9990234375],
+            "size": [128, 64]
+        },
+        {
+            "id": "stop_wall_top (42)",
+            "type": "@stop_wall_top",
+            "pos": [-21344.0, -14336.0],
+            "size": [192, 128]
+        },
+        {
+            "id": "stop_wall_top (43)",
+            "type": "@stop_wall_top",
+            "pos": [-21376.0, -14432.0009765625],
+            "size": [128, 64]
+        },
+        {
+            "id": "stop_wall_top (44)",
+            "type": "@stop_wall_top",
+            "pos": [-21408.0, -14496.0009765625],
+            "size": [64, 64]
+        },
+        {
+            "id": "water_dirt (22)",
+            "type": "@water_dirt",
+            "pos": [-20544.0, -15104.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "water_dirt (23)",
+            "type": "@water_dirt",
+            "pos": [-21344.0, -14848.0],
+            "size": [192, 128]
+        },
+        {
+            "id": "stop_wall_top (45)",
+            "type": "@stop_wall_top",
+            "pos": [-21536.0, -14432.0009765625],
+            "size": [192, 576]
+        },
+        {
+            "id": "stop_wall_top (46)",
+            "type": "@stop_wall_top",
+            "pos": [-21568.0, -14784.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "stop_wall_top (47)",
+            "type": "@stop_wall_top",
+            "pos": [-21600.0, -14880.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (49)",
+            "type": "@stop_wall_top",
+            "pos": [-21760.0, -15072.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stop_wall_top (50)",
+            "type": "@stop_wall_top",
+            "pos": [-21920.0, -15136.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "stop_wall_top (52)",
+            "type": "@stop_wall_top",
+            "pos": [-22784.0, -15264.0],
+            "size": [256, 64]
+        },
+        {
+            "id": "stop_wall_top (54)",
+            "type": "@stop_wall_top",
+            "pos": [-23136.0, -15392.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (56)",
+            "type": "@stop_wall_top",
+            "pos": [-23264.0, -15520.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (58)",
+            "type": "@stop_wall_top",
+            "pos": [-23392.0, -15680.0],
+            "size": [64, 128]
+        },
+        {
+            "id": "stop_wall_top (59)",
+            "type": "@stop_wall_top",
+            "pos": [-23456.0, -16544.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (41)",
+            "type": "@stone_wall",
+            "pos": [-23392.0, -16480.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (60)",
+            "type": "@stop_wall_top",
+            "pos": [-23392.0, -16608.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "stone_wall (42)",
+            "type": "@stone_wall",
+            "pos": [-23328.0, -16608.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (43)",
+            "type": "@stone_wall",
+            "pos": [-23264.0, -16672.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (44)",
+            "type": "@stone_wall",
+            "pos": [-23168.0, -16736.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (45)",
+            "type": "@stone_wall",
+            "pos": [-23040.0, -16800.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (46)",
+            "type": "@stone_wall",
+            "pos": [-22848.0, -16864.0],
+            "size": [256, 64]
+        },
+        {
+            "id": "stone_wall (47)",
+            "type": "@stone_wall",
+            "pos": [-22624.0, -16928.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "stone_wall (48)",
+            "type": "@stone_wall",
+            "pos": [-22432.0, -16992.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "stone_wall (49)",
+            "type": "@stone_wall",
+            "pos": [-22272.0, -17056.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (50)",
+            "type": "@stone_wall",
+            "pos": [-22176.0, -17120.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (61)",
+            "type": "@stop_wall_top",
+            "pos": [-22208.0, -17216.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "stop_wall_top (62)",
+            "type": "@stop_wall_top",
+            "pos": [-22272.0, -17152.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "stop_wall_top (63)",
+            "type": "@stop_wall_top",
+            "pos": [-22400.0, -17088.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "stop_wall_top (64)",
+            "type": "@stop_wall_top",
+            "pos": [-22560.0, -17024.0],
+            "size": [192, 128]
+        },
+        {
+            "id": "stop_wall_top (65)",
+            "type": "@stop_wall_top",
+            "pos": [-22752.0, -16960.0],
+            "size": [192, 128]
+        },
+        {
+            "id": "grass (7)",
+            "type": "@grass.png",
+            "pos": [-22496.0, -17120.0]
+        },
+        {
+            "id": "stop_wall_top (66)",
+            "type": "@stop_wall_top",
+            "pos": [-22976.0, -16896.0],
+            "size": [256, 128]
+        },
+        {
+            "id": "stop_wall_top (67)",
+            "type": "@stop_wall_top",
+            "pos": [-23136.0, -16832.0],
+            "size": [192, 128]
+        },
+        {
+            "id": "stop_wall_top (68)",
+            "type": "@stop_wall_top",
+            "pos": [-23264.0, -16768.0],
+            "size": [64, 128]
+        },
+        {
+            "id": "stop_wall_top (69)",
+            "type": "@stop_wall_top",
+            "pos": [-23328.0, -16704.0],
+            "size": [64, 128]
+        },
+        {
+            "id": "stop_wall_top (70)",
+            "type": "@stop_wall_top",
+            "pos": [-23488.0, -15936.0],
+            "size": [128, 1152]
+        },
+        {
+            "id": "grass_wall_top",
+            "type": "@grass_wall_top",
+            "pos": [-23872.0, -19904.0],
+            "size": [3456, 1152]
+        },
+        {
+            "id": "grass_wall_top (1)",
+            "type": "@grass_wall_top",
+            "pos": [-24832.0, -15200.0],
+            "size": [1536, 2240]
+        },
+        {
+            "id": "grass_wall_top (2)",
+            "type": "@grass_wall_top",
+            "pos": [-23840.0, -16352.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "grass_wall_top (3)",
+            "type": "@grass_wall_top",
+            "pos": [-23904.0, -16416.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "grass_wall_top (4)",
+            "type": "@grass_wall_top",
+            "pos": [-24416.0, -16352.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "grass_wall_top (5)",
+            "type": "@grass_wall_top",
+            "pos": [-24576.0, -16384.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "grass_wall_top (6)",
+            "type": "@grass_wall_top",
+            "pos": [-24704.0, -16480.0],
+            "size": [128, 320]
+        },
+        {
+            "id": "grass_wall_top (7)",
+            "type": "@grass_wall_top",
+            "pos": [-24736.0, -16768.0],
+            "size": [64, 256]
+        },
+        {
+            "id": "grass_wall_top (8)",
+            "type": "@grass_wall_top",
+            "pos": [-25184.0, -17824.0],
+            "size": [832, 3008]
+        },
+        {
+            "id": "grass_wall (7)",
+            "type": "@grass_wall",
+            "pos": [-24736.0, -17056.0]
+        },
+        {
+            "id": "grass_wall_top (9)",
+            "type": "@grass_wall_top",
+            "pos": [-24736.0, -17184.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "grass_wall (8)",
+            "type": "@grass_wall",
+            "pos": [-24672.0, -17248.0]
+        },
+        {
+            "id": "grass_wall_top (10)",
+            "type": "@grass_wall_top",
+            "pos": [-24704.0, -17440.0],
+            "size": [128, 320]
+        },
+        {
+            "id": "grass_wall_top (11)",
+            "type": "@grass_wall_top",
+            "pos": [-24736.0, -17696.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "grass_wall (9)",
+            "type": "@grass_wall",
+            "pos": [-24736.0, -18016.0]
+        },
+        {
+            "id": "grass_wall_top (12)",
+            "type": "@grass_wall_top",
+            "pos": [-24736.0, -18144.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "grass_wall (10)",
+            "type": "@grass_wall",
+            "pos": [-24672.0, -18208.0]
+        },
+        {
+            "id": "grass_wall_top (13)",
+            "type": "@grass_wall_top",
+            "pos": [-24704.0, -18368.0],
+            "size": [128, 256]
+        },
+        {
+            "id": "grass_wall_top (14)",
+            "type": "@grass_wall_top",
+            "pos": [-24736.0, -18528.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "grass_wall (11)",
+            "type": "@grass_wall",
+            "pos": [-24736.0, -18976.0]
+        },
+        {
+            "id": "grass_wall_top (15)",
+            "type": "@grass_wall_top",
+            "pos": [-24736.0, -19104.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "grass_wall_top (16)",
+            "type": "@grass_wall_top",
+            "pos": [-24640.0, -19264.0],
+            "rotation": -90.0,
+            "size": [128, 256]
+        },
+        {
+            "id": "grass_wall (12)",
+            "type": "@grass_wall",
+            "pos": [-24608.0, -19168.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "grass_wall (13)",
+            "type": "@grass_wall",
+            "pos": [-24320.0, -19232.0],
+            "size": [384, 64]
+        },
+        {
+            "id": "grass_wall_top (17)",
+            "type": "@grass_wall_top",
+            "pos": [-23936.0, -19296.0],
+            "rotation": -90.0,
+            "size": [64, 1152]
+        },
+        {
+            "id": "grass_wall_top (18)",
+            "type": "@grass_wall_top",
+            "pos": [-23840.0, -19232.0],
+            "rotation": -90.0,
+            "size": [64, 576]
+        },
+        {
+            "id": "grass_wall_top (19)",
+            "type": "@grass_wall_top",
+            "pos": [-22784.0, -19296.0],
+            "rotation": -90.0,
+            "size": [64, 896]
+        },
+        {
+            "id": "grass_wall_top (20)",
+            "type": "@grass_wall_top",
+            "pos": [-22752.0, -19232.0],
+            "rotation": -90.0,
+            "size": [64, 192]
+        },
+        {
+            "id": "stop_wall_top (71)",
+            "type": "@stop_wall_top",
+            "pos": [-20992.0, -13728.0],
+            "size": [5120, 832]
+        },
+        {
+            "id": "stop_wall_top (72)",
+            "type": "@stop_wall_top",
+            "pos": [-22592.0, -14592.0],
+            "size": [1920, 896]
+        },
+        {
+            "id": "stop_wall_top (73)",
+            "type": "@stop_wall_top",
+            "pos": [-23232.0, -15200.0],
+            "size": [640, 320]
+        },
+        {
+            "id": "stop_wall_top (48)",
+            "type": "@stop_wall_top",
+            "pos": [-22464.0, -15136.0],
+            "size": [896, 192]
+        },
+        {
+            "id": "stop_wall_top (51)",
+            "type": "@stop_wall_top",
+            "pos": [-21920.0, -15072.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "stop_wall_top (53)",
+            "type": "@stop_wall_top",
+            "pos": [-23296.0, -15424.0009765625],
+            "size": [256, 128]
+        },
+        {
+            "id": "stop_wall_top (55)",
+            "type": "@stop_wall_top",
+            "pos": [-23360.0, -15552.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "stop_wall_top (57)",
+            "type": "@stop_wall_top",
+            "pos": [-19552.0, -16864.0],
+            "size": [832, 576]
+        },
+        {
+            "id": "stop_wall_top (74)",
+            "type": "@stop_wall_top",
+            "pos": [-20224.0, -17056.0],
+            "size": [512, 192]
+        },
+        {
+            "id": "stop_wall_top (75)",
+            "type": "@stop_wall_top",
+            "pos": [-20128.0, -16864.0],
+            "size": [320, 192]
+        },
+        {
+            "id": "stop_wall_top (76)",
+            "type": "@stop_wall_top",
+            "pos": [-20352.0, -16928.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stop_wall_top (77)",
+            "type": "@stop_wall_top",
+            "pos": [-20320.0, -16864.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (78)",
+            "type": "@stop_wall_top",
+            "pos": [-20032.0, -16704.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "stop_wall_top (79)",
+            "type": "@stop_wall_top",
+            "pos": [-20160.0, -16736.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stop_wall_top (80)",
+            "type": "@stop_wall_top",
+            "pos": [-19488.0, -16480.0],
+            "size": [320, 192]
+        },
+        {
+            "id": "stop_wall_top (81)",
+            "type": "@stop_wall_top",
+            "pos": [-19744.0, -16544.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "stop_wall_top (82)",
+            "type": "@stop_wall_top",
+            "pos": [-19680.0, -16480.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (83)",
+            "type": "@stop_wall_top",
+            "pos": [-19424.0, -16352.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "stop_wall_top (84)",
+            "type": "@stop_wall_top",
+            "pos": [-19360.0, -16256.0],
+            "size": [64, 128]
+        },
+        {
+            "id": "stop_wall_top (85)",
+            "type": "@stop_wall_top",
+            "pos": [-19424.0, -16288.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (86)",
+            "type": "@stop_wall_top",
+            "pos": [-19968.0, -20032.0],
+            "size": [3072, 896]
+        },
+        {
+            "id": "stop_wall_top (87)",
+            "type": "@stop_wall_top",
+            "pos": [-19008.0, -18624.0],
+            "size": [1152, 1920]
+        },
+        {
+            "id": "stop_wall_top (88)",
+            "type": "@stop_wall_top",
+            "pos": [-20064.0, -18272.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (89)",
+            "type": "@stop_wall_top",
+            "pos": [-19776.0, -18208.0],
+            "size": [384, 64]
+        },
+        {
+            "id": "stop_wall_top (90)",
+            "type": "@stop_wall_top",
+            "pos": [-19648.0, -18112.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "stop_wall_top (91)",
+            "type": "@stop_wall_top",
+            "pos": [-19744.0, -18144.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (92)",
+            "type": "@stop_wall_top",
+            "pos": [-19616.0, -17984.0],
+            "size": [64, 128]
+        },
+        {
+            "id": "stop_wall_top (93)",
+            "type": "@stop_wall_top",
+            "pos": [-20128.0, -19488.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "stop_wall_top (94)",
+            "type": "@stop_wall_top",
+            "pos": [-20320.0, -19520.0],
+            "size": [192, 128]
+        },
+        {
+            "id": "stop_wall_top (95)",
+            "type": "@stop_wall_top",
+            "pos": [-20480.0, -19552.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stop_wall_top (96)",
+            "type": "@stop_wall_top",
+            "pos": [-22016.0, -19520.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "stop_wall_top (97)",
+            "type": "@stop_wall_top",
+            "pos": [-21888.0, -19520.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "stop_wall_top (98)",
+            "type": "@stop_wall_top",
+            "pos": [-21760.0, -19552.0],
+            "size": [128, 192]
+        },
+        {
+            "id": "stop_wall_top (99)",
+            "type": "@stop_wall_top",
+            "pos": [-21632.0, -19712.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "stop_wall_top (100)",
+            "type": "@stop_wall_top",
+            "pos": [-21600.0, -19616.0],
+            "size": [192, 320]
+        },
+        {
+            "id": "stop_wall_top (101)",
+            "type": "@stop_wall_top",
+            "pos": [-21440.0, -19552.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stop_wall_top (102)",
+            "type": "@stop_wall_top",
+            "pos": [-21472.0, -19488.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "grass_wall_top (21)",
+            "type": "@grass_wall_top",
+            "pos": [-21824.0, -20128.0],
+            "size": [640, 704]
+        },
+        {
+            "id": "grass_wall_top (22)",
+            "type": "@grass_wall_top",
+            "pos": [-21984.0, -19680.0],
+            "size": [320, 192]
+        },
+        {
+            "id": "grass_wall_top (23)",
+            "type": "@grass_wall_top",
+            "pos": [-21760.0, -19712.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "grass_wall_top (24)",
+            "type": "@grass_wall_top",
+            "pos": [-22112.0, -19520.0],
+            "size": [64, 128]
+        },
+        {
+            "id": "stop_wall_top (103)",
+            "type": "@stop_wall_top",
+            "pos": [-21760.0, -19168.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stop_wall_top (104)",
+            "type": "@stop_wall_top",
+            "pos": [-21664.0, -19104.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (105)",
+            "type": "@stop_wall_top",
+            "pos": [-21600.0, -18784.0],
+            "size": [64, 576]
+        },
+        {
+            "id": "stop_wall_top (106)",
+            "type": "@stop_wall_top",
+            "pos": [-21536.0, -18912.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (107)",
+            "type": "@stop_wall_top",
+            "pos": [-21472.0, -18720.0],
+            "size": [192, 320]
+        },
+        {
+            "id": "stop_wall_top (108)",
+            "type": "@stop_wall_top",
+            "pos": [-21504.0, -18528.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "grass_wall_top (25)",
+            "type": "@grass_wall_top",
+            "pos": [-21760.0, -19104.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "grass_wall (14)",
+            "type": "@grass_wall",
+            "pos": [-21792.0, -19040.0]
+        },
+        {
+            "id": "grass_wall (15)",
+            "type": "@grass_wall",
+            "pos": [-21728.0, -18656.0]
+        },
+        {
+            "id": "grass_wall (16)",
+            "type": "@grass_wall",
+            "pos": [-21664.0, -18528.0]
+        },
+        {
+            "id": "grass_wall_top (26)",
+            "type": "@grass_wall_top",
+            "pos": [-21696.0, -18880.0],
+            "size": [128, 384]
+        },
+        {
+            "id": "grass_wall_top (27)",
+            "type": "@grass_wall_top",
+            "pos": [-21664.0, -18624.0],
+            "size": [64, 128]
+        },
+        {
+            "id": "stop_wall_top (109)",
+            "type": "@stop_wall_top",
+            "pos": [-21344.0, -18720.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "stop_wall_top (110)",
+            "type": "@stop_wall_top",
+            "pos": [-21280.0, -18720.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (51)",
+            "type": "@stone_wall",
+            "pos": [-21280.0, -18656.0]
+        },
+        {
+            "id": "stone_wall (52)",
+            "type": "@stone_wall",
+            "pos": [-21344.0, -18592.0]
+        },
+        {
+            "id": "stone_wall (53)",
+            "type": "@stone_wall",
+            "pos": [-21408.0, -18528.0]
+        },
+        {
+            "id": "stone_wall (54)",
+            "type": "@stone_wall",
+            "pos": [-21856.0, -19104.0]
+        },
+        {
+            "id": "stone_wall (55)",
+            "type": "@stone_wall",
+            "pos": [-21600.0, -18272.0]
+        },
+        {
+            "id": "stone_wall (56)",
+            "type": "@stone_wall",
+            "pos": [-21664.0, -18208.0]
+        },
+        {
+            "id": "stop_wall_top (112)",
+            "type": "@stop_wall_top",
+            "pos": [-21664.0, -18272.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (113)",
+            "type": "@stop_wall_top",
+            "pos": [-21728.0, -18144.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "stone_wall (57)",
+            "type": "@stone_wall",
+            "pos": [-21728.0, -18016.0]
+        },
+        {
+            "id": "stone_wall (58)",
+            "type": "@stone_wall",
+            "pos": [-21664.0, -17952.0]
+        },
+        {
+            "id": "stone_wall (59)",
+            "type": "@stone_wall",
+            "pos": [-21600.0, -17824.0]
+        },
+        {
+            "id": "stop_wall_top (114)",
+            "type": "@stop_wall_top",
+            "pos": [-21600.0, -17888.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (115)",
+            "type": "@stop_wall_top",
+            "pos": [-21536.0, -17760.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (116)",
+            "type": "@stop_wall_top",
+            "pos": [-21504.0, -17664.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "stop_wall_top (117)",
+            "type": "@stop_wall_top",
+            "pos": [-21472.0, -17568.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "stop_wall_top (118)",
+            "type": "@stop_wall_top",
+            "pos": [-21440.0, -17408.0],
+            "size": [384, 256]
+        },
+        {
+            "id": "stone_wall (60)",
+            "type": "@stone_wall",
+            "pos": [-21280.0, -17248.0]
+        },
+        {
+            "id": "stop_wall_top (119)",
+            "type": "@stop_wall_top",
+            "pos": [-21664.0, -16768.0],
+            "size": [448, 128]
+        },
+        {
+            "id": "stop_wall_top (120)",
+            "type": "@stop_wall_top",
+            "pos": [-21728.0, -17216.0],
+            "size": [64, 256]
+        },
+        {
+            "id": "stop_wall_top (121)",
+            "type": "@stop_wall_top",
+            "pos": [-21792.0, -17184.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "stop_wall_top (122)",
+            "type": "@stop_wall_top",
+            "pos": [-21856.0, -17152.0],
+            "size": [64, 128]
+        },
+        {
+            "id": "stop_wall_top (111)",
+            "type": "@stop_wall_top",
+            "pos": [-21504.0, -17248.0],
+            "size": [384, 320]
+        },
+        {
+            "id": "stone_wall (61)",
+            "type": "@stone_wall",
+            "pos": [-21472.0, -16672.0]
+        },
+        {
+            "id": "stop_wall_top (123)",
+            "type": "@stop_wall_top",
+            "pos": [-21920.0, -16736.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (124)",
+            "type": "@stop_wall_top",
+            "pos": [-21792.0, -16608.0],
+            "size": [576, 192]
+        },
+        {
+            "id": "stone_wall (62)",
+            "type": "@stone_wall",
+            "pos": [-21536.0, -16480.0]
+        },
+        {
+            "id": "fg_stone",
+            "type": "@fg_stone",
+            "pos": [-21600.0, -18400.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "fg_stone_wall",
+            "type": "@fg_stone_wall",
+            "pos": [-21504.0, -18464.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "fg_stone (1)",
+            "type": "@fg_stone",
+            "pos": [-21664.0, -18336.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "fg_stone (2)",
+            "type": "@fg_stone",
+            "pos": [-21664.0, -16960.0],
+            "size": [448, 256]
+        },
+        {
+            "id": "fg_stone_wall (1)",
+            "type": "@fg_stone_wall",
+            "pos": [-21344.0, -16992.0]
+        },
+        {
+            "id": "fg_stone_wall (2)",
+            "type": "@fg_stone_wall",
+            "pos": [-21408.0, -16864.0]
+        },
+        {
+            "id": "fg_stone (3)",
+            "type": "@fg_stone",
+            "pos": [-21408.0, -16992.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "fg_stone (4)",
+            "type": "@fg_stone",
+            "pos": [-21344.0, -17056.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "noclip_stone",
+            "type": "@noclip_stone",
+            "pos": [-21664.0, -16960.0],
+            "size": [448, 256]
+        },
+        {
+            "id": "noclip_stone (1)",
+            "type": "@noclip_stone",
+            "pos": [-21664.0, -18336.0]
+        },
+        {
+            "id": "noclip_stone (2)",
+            "type": "@noclip_stone",
+            "pos": [-21600.0, -18400.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "fg_stone (5)",
+            "type": "@fg_stone",
+            "pos": [-21408.0, -16992.0],
+            "size": [64, 192]
+        },
+        {
+            "id": "fg_stone (6)",
+            "type": "@fg_stone",
+            "pos": [-21344.0, -17056.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (63)",
+            "type": "@stone_wall",
+            "pos": [-21600.0, -16224.0009765625]
+        },
+        {
+            "id": "stone_wall (64)",
+            "type": "@stone_wall",
+            "pos": [-21664.0, -16032.0009765625]
+        },
+        {
+            "id": "stone_wall (65)",
+            "type": "@stone_wall",
+            "pos": [-21728.0, -15967.9990234375]
+        },
+        {
+            "id": "stone_wall (66)",
+            "type": "@stone_wall",
+            "pos": [-21856.0, -15903.9990234375],
+            "size": [192, 64]
+        },
+        {
+            "id": "stone_wall (67)",
+            "type": "@stone_wall",
+            "pos": [-22016.0, -15839.9990234375],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (68)",
+            "type": "@stone_wall",
+            "pos": [-22272.0, -15775.9990234375],
+            "size": [384, 64]
+        },
+        {
+            "id": "stone_wall (69)",
+            "type": "@stone_wall",
+            "pos": [-22592.0, -15839.9990234375],
+            "size": [256, 64]
+        },
+        {
+            "id": "stone_wall (70)",
+            "type": "@stone_wall",
+            "pos": [-22784.0, -15903.9990234375],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (71)",
+            "type": "@stone_wall",
+            "pos": [-22880.0, -15967.9990234375]
+        },
+        {
+            "id": "stone_wall (72)",
+            "type": "@stone_wall",
+            "pos": [-22944.0, -16032.0009765625]
+        },
+        {
+            "id": "stone_wall (73)",
+            "type": "@stone_wall",
+            "pos": [-23008.0, -16096.0009765625]
+        },
+        {
+            "id": "stop_wall_top (125)",
+            "type": "@stop_wall_top",
+            "pos": [-22304.0, -16256.0],
+            "size": [704, 768]
+        },
+        {
+            "id": "stop_wall_top (126)",
+            "type": "@stop_wall_top",
+            "pos": [-21760.0, -16384.0],
+            "size": [384, 256]
+        },
+        {
+            "id": "stop_wall_top (127)",
+            "type": "@stop_wall_top",
+            "pos": [-21856.0, -16096.0009765625],
+            "size": [192, 320]
+        },
+        {
+            "id": "stop_wall_top (128)",
+            "type": "@stop_wall_top",
+            "pos": [-21696.0, -16160.0009765625],
+            "size": [128, 192]
+        },
+        {
+            "id": "stop_wall_top (129)",
+            "type": "@stop_wall_top",
+            "pos": [-21728.0, -16032.0009765625],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (130)",
+            "type": "@stop_wall_top",
+            "pos": [-22272.0, -15839.9990234375],
+            "size": [384, 64]
+        },
+        {
+            "id": "stop_wall_top (131)",
+            "type": "@stop_wall_top",
+            "pos": [-22752.0, -16256.0],
+            "size": [192, 640]
+        },
+        {
+            "id": "stop_wall_top (132)",
+            "type": "@stop_wall_top",
+            "pos": [-22688.0, -15903.9990234375],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (133)",
+            "type": "@stop_wall_top",
+            "pos": [-22880.0, -16256.0],
+            "size": [64, 512]
+        },
+        {
+            "id": "stop_wall_top (134)",
+            "type": "@stop_wall_top",
+            "pos": [-22944.0, -16224.0009765625],
+            "size": [64, 320]
+        },
+        {
+            "id": "stop_wall_top (135)",
+            "type": "@stop_wall_top",
+            "pos": [-23008.0, -16160.0009765625],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone (14)",
+            "type": "@stone.png",
+            "pos": [-22976.0, -16384.0],
+            "size": [896, 512]
+        },
+        {
+            "id": "stone (15)",
+            "type": "@stone.png",
+            "pos": [-22880.0, -16768.0],
+            "size": [704, 256]
+        },
+        {
+            "id": "bg_stone_wall (16)",
+            "type": "@bg_stone_wall",
+            "pos": [-21472.0, -14880.0]
+        },
+        {
+            "id": "bg_stone_wall (17)",
+            "type": "@bg_stone_wall",
+            "pos": [-21344.0, -14944.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "bg_stone_wall (18)",
+            "type": "@bg_stone_wall",
+            "pos": [-21120.0, -15008.0],
+            "size": [256, 64]
+        },
+        {
+            "id": "bg_stone_wall (19)",
+            "type": "@bg_stone_wall",
+            "pos": [-20864.0, -15072.0],
+            "size": [256, 64]
+        },
+        {
+            "id": "bg_stone_wall (20)",
+            "type": "@bg_stone_wall",
+            "pos": [-20672.0, -15136.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "bg_stone_wall (21)",
+            "type": "@bg_stone_wall",
+            "pos": [-20576.0, -15200.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "bg_stone_wall (22)",
+            "type": "@bg_stone_wall",
+            "pos": [-20480.0, -15264.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "bg_stone_wall (23)",
+            "type": "@bg_stone_wall",
+            "pos": [-20384.0, -15328.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "bg_stone_wall (24)",
+            "type": "@bg_stone_wall",
+            "pos": [-20320.0, -15520.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "bg_stone_wall (25)",
+            "type": "@bg_stone_wall",
+            "pos": [-20192.0, -16032.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "bg_stone_wall (26)",
+            "type": "@bg_stone_wall",
+            "pos": [-20128.0, -16160.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "bg_stone_wall (27)",
+            "type": "@bg_stone_wall",
+            "pos": [-19968.0, -16224.0],
+            "size": [256, 64]
+        },
+        {
+            "id": "bg_stone_wall (28)",
+            "type": "@bg_stone_wall",
+            "pos": [-19744.0, -16288.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "easteregg",
+            "type": "@easteregg",
+            "pos": [-24641.0, -13702.0]
+        },
+        {
+            "id": "bg_stone_wall (29)",
+            "type": "@bg_stone_wall",
+            "pos": [-20256.0, -15968.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (74)",
+            "type": "@stone_wall",
+            "pos": [-20704.0, -15903.9990234375]
+        },
+        {
+            "id": "stone_wall (75)",
+            "type": "@stone_wall",
+            "pos": [-20768.0, -15839.9990234375]
+        },
+        {
+            "id": "stone_wall (76)",
+            "type": "@stone_wall",
+            "pos": [-20832.0, -15775.9990234375]
+        },
+        {
+            "id": "stone_wall (77)",
+            "type": "@stone_wall",
+            "pos": [-20896.0, -15839.9990234375]
+        },
+        {
+            "id": "stop_wall_top (136)",
+            "type": "@stop_wall_top",
+            "pos": [-20800.0, -15936.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "stop_wall_top (137)",
+            "type": "@stop_wall_top",
+            "pos": [-20832.0, -15839.9990234375],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (138)",
+            "type": "@stop_wall_top",
+            "pos": [-20896.0, -15903.9990234375],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (78)",
+            "type": "@stone_wall",
+            "pos": [-19488.0, -15648.0]
+        },
+        {
+            "id": "stone_wall (79)",
+            "type": "@stone_wall",
+            "pos": [-19584.0, -15584.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (80)",
+            "type": "@stone_wall",
+            "pos": [-19680.0, -15648.0]
+        },
+        {
+            "id": "stop_wall_top (139)",
+            "type": "@stop_wall_top",
+            "pos": [-19584.0, -15680.0],
+            "size": [128, 128]
+        },
+        {
+            "id": "stop_wall_top (140)",
+            "type": "@stop_wall_top",
+            "pos": [-19488.0, -15712.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stone_wall (81)",
+            "type": "@stone_wall",
+            "pos": [-20704.0, -18592.0]
+        },
+        {
+            "id": "stone_wall (82)",
+            "type": "@stone_wall",
+            "pos": [-20608.0, -18656.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (83)",
+            "type": "@stone_wall",
+            "pos": [-20768.0, -18656.0]
+        },
+        {
+            "id": "stop_wall_top (141)",
+            "type": "@stop_wall_top",
+            "pos": [-20672.0, -18720.0],
+            "size": [256, 64]
+        },
+        {
+            "id": "stop_wall_top (142)",
+            "type": "@stop_wall_top",
+            "pos": [-20704.0, -18656.0]
+        },
+        {
+            "id": "stop_wall_top (143)",
+            "type": "@stop_wall_top",
+            "pos": [-21184.0, -19232.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (84)",
+            "type": "@stone_wall",
+            "pos": [-21280.0, -19232.0]
+        },
+        {
+            "id": "stone_wall (85)",
+            "type": "@stone_wall",
+            "pos": [-21184.0, -19168.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "grass_wall_top (28)",
+            "type": "@grass_wall_top",
+            "pos": [-23744.0, -15200.0],
+            "size": [384, 2240]
+        },
+        {
+            "id": "grass_wall_top (29)",
+            "type": "@grass_wall_top",
+            "pos": [-24096.0, -16352.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "noclip_grass_wall_top",
+            "type": "@noclip_grass_wall_top",
+            "pos": [-24000.0, -15264.0],
+            "size": [128, 2368]
+        },
+        {
+            "id": "oak_log_top (33)",
+            "type": "@oak_log_top",
+            "pos": [-22432.0, -18464.0]
+        },
+        {
+            "id": "oak_log_top (34)",
+            "type": "@oak_log_top",
+            "pos": [-22304.0, -18720.0]
+        },
+        {
+            "id": "oak_log_top (35)",
+            "type": "@oak_log_top",
+            "pos": [-22112.0, -18336.0]
+        },
+        {
+            "id": "oak_log_top (36)",
+            "type": "@oak_log_top",
+            "pos": [-21920.0, -18144.0]
+        },
+        {
+            "id": "oak_log_top (37)",
+            "type": "@oak_log_top",
+            "pos": [-22112.0, -17952.0]
+        },
+        {
+            "id": "oak_log_top (38)",
+            "type": "@oak_log_top",
+            "pos": [-21920.0, -17760.0]
+        },
+        {
+            "id": "oak_log_top (39)",
+            "type": "@oak_log_top",
+            "pos": [-21728.0, -17568.0]
+        },
+        {
+            "id": "oak_log_top (40)",
+            "type": "@oak_log_top",
+            "pos": [-22048.0, -17504.0]
+        },
+        {
+            "id": "oak_log_top (41)",
+            "type": "@oak_log_top",
+            "pos": [-22688.0, -17568.0]
+        },
+        {
+            "id": "oak_log_top (42)",
+            "type": "@oak_log_top",
+            "pos": [-22880.0, -17824.0]
+        },
+        {
+            "id": "oak_log_top (43)",
+            "type": "@oak_log_top",
+            "pos": [-23136.0, -18080.0]
+        },
+        {
+            "id": "oak_log_top (44)",
+            "type": "@oak_log_top",
+            "pos": [-22816.0, -18144.0]
+        },
+        {
+            "id": "oak_log_top (45)",
+            "type": "@oak_log_top",
+            "pos": [-23008.0, -17504.0]
+        },
+        {
+            "id": "oak_log_top (46)",
+            "type": "@oak_log_top",
+            "pos": [-22432.0, -18080.0]
+        },
+        {
+            "id": "oak_log_top (47)",
+            "type": "@oak_log_top",
+            "pos": [-22240.0, -17696.0]
+        },
+        {
+            "id": "oak_log_top (48)",
+            "type": "@oak_log_top",
+            "pos": [-22688.0, -17184.0]
+        },
+        {
+            "id": "oak_log_top (49)",
+            "type": "@oak_log_top",
+            "pos": [-23264.0, -17184.0]
+        },
+        {
+            "id": "oak_log_top (50)",
+            "type": "@oak_log_top",
+            "pos": [-23392.0, -16928.0]
+        },
+        {
+            "id": "oak_log_top (51)",
+            "type": "@oak_log_top",
+            "pos": [-23776.0, -17120.0]
+        },
+        {
+            "id": "oak_log_top (52)",
+            "type": "@oak_log_top",
+            "pos": [-24224.0, -16864.0]
+        },
+        {
+            "id": "oak_log_top (53)",
+            "type": "@oak_log_top",
+            "pos": [-24416.0, -17184.0]
+        },
+        {
+            "id": "oak_log_top (54)",
+            "type": "@oak_log_top",
+            "pos": [-24096.0, -17824.0]
+        },
+        {
+            "id": "oak_log_top (55)",
+            "type": "@oak_log_top",
+            "pos": [-23904.0, -18336.0]
+        },
+        {
+            "id": "oak_log_top (56)",
+            "type": "@oak_log_top",
+            "pos": [-23904.0, -16544.0]
+        },
+        {
+            "id": "oak_log_top (57)",
+            "type": "@oak_log_top",
+            "pos": [-23648.0, -16800.0]
+        },
+        {
+            "id": "oak_log_top (58)",
+            "type": "@oak_log_top",
+            "pos": [-23008.0, -17248.0]
+        },
+        {
+            "id": "oak_log_top (59)",
+            "type": "@oak_log_top",
+            "pos": [-22496.0, -17440.0]
+        },
+        {
+            "id": "oak_log_top (60)",
+            "type": "@oak_log_top",
+            "pos": [-21920.0, -18912.0]
+        },
+        {
+            "id": "oak_leaves",
+            "type": "@oak_leaves",
+            "pos": [-24352.0, -18912.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (1)",
+            "type": "@oak_leaves",
+            "pos": [-24096.0, -19040.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (2)",
+            "type": "@oak_leaves",
+            "pos": [-23648.0, -18976.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (3)",
+            "type": "@oak_leaves",
+            "pos": [-23200.0, -19040.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (4)",
+            "type": "@oak_leaves",
+            "pos": [-23264.0, -18656.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (5)",
+            "type": "@oak_leaves",
+            "pos": [-23072.0, -18784.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (6)",
+            "type": "@oak_leaves",
+            "pos": [-22880.0, -18912.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (7)",
+            "type": "@oak_leaves",
+            "pos": [-23136.0, -18080.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (8)",
+            "type": "@oak_leaves",
+            "pos": [-22816.0, -18144.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (9)",
+            "type": "@oak_leaves",
+            "pos": [-22816.0, -18528.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (10)",
+            "type": "@oak_leaves",
+            "pos": [-22432.0, -18464.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (11)",
+            "type": "@oak_leaves",
+            "pos": [-22304.0, -18720.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (12)",
+            "type": "@oak_leaves",
+            "pos": [-22560.0, -19040.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (13)",
+            "type": "@oak_leaves",
+            "pos": [-21920.0, -18912.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (14)",
+            "type": "@oak_leaves",
+            "pos": [-21920.0, -18144.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (15)",
+            "type": "@oak_leaves",
+            "pos": [-22112.0, -18336.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (16)",
+            "type": "@oak_leaves",
+            "pos": [-22432.0, -18080.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (17)",
+            "type": "@oak_leaves",
+            "pos": [-22240.0, -17696.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (18)",
+            "type": "@oak_leaves",
+            "pos": [-22112.0, -17952.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (19)",
+            "type": "@oak_leaves",
+            "pos": [-21920.0, -17760.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (20)",
+            "type": "@oak_leaves",
+            "pos": [-21728.0, -17568.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (21)",
+            "type": "@oak_leaves",
+            "pos": [-22048.0, -17504.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (22)",
+            "type": "@oak_leaves",
+            "pos": [-22496.0, -17440.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (23)",
+            "type": "@oak_leaves",
+            "pos": [-22688.0, -17568.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (24)",
+            "type": "@oak_leaves",
+            "pos": [-22880.0, -17824.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (25)",
+            "type": "@oak_leaves",
+            "pos": [-23008.0, -17504.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (26)",
+            "type": "@oak_leaves",
+            "pos": [-22688.0, -17184.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (27)",
+            "type": "@oak_leaves",
+            "pos": [-23008.0, -17248.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (28)",
+            "type": "@oak_leaves",
+            "pos": [-23264.0, -17184.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (29)",
+            "type": "@oak_leaves",
+            "pos": [-23392.0, -16928.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (30)",
+            "type": "@oak_leaves",
+            "pos": [-23648.0, -16800.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (31)",
+            "type": "@oak_leaves",
+            "pos": [-23904.0, -16544.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (32)",
+            "type": "@oak_leaves",
+            "pos": [-24224.0, -16864.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (33)",
+            "type": "@oak_leaves",
+            "pos": [-24416.0, -17184.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (34)",
+            "type": "@oak_leaves",
+            "pos": [-23776.0, -17120.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "stone (16)",
+            "type": "@stone.png",
+            "pos": [-21696.0, -18080.0],
+            "size": [128, 192]
+        },
+        {
+            "id": "stone (17)",
+            "type": "@stone.png",
+            "pos": [-21568.0, -19040.0],
+            "size": [128, 192]
+        },
+        {
+            "id": "fg_obsidian (1)",
+            "type": "@fg_obsidian",
+            "pos": [-20000.0, -18208.0],
+            "size": [192, 64]
+        },
+        {
+            "id": "fg_obsidian (2)",
+            "type": "@fg_obsidian",
+            "pos": [-19936.0, -18048.0],
+            "size": [64, 256]
+        },
+        {
+            "id": "nether_portal",
+            "type": "@nether_portal",
+            "pos": [-20032.0, -18080.0],
+            "size": [128, 192]
+        },
+        {
+            "id": "oak_leaves (35)",
+            "type": "@oak_leaves",
+            "pos": [-24096.0, -17824.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "oak_leaves (36)",
+            "type": "@oak_leaves",
+            "pos": [-23904.0, -18336.0],
+            "size": [192, 192]
+        },
+        {
+            "id": "stop_wall_top (144)",
+            "type": "@stop_wall_top",
+            "pos": [-21568.0, -19424.0],
+            "size": [128, 64]
+        },
+        {
+            "id": "stone_wall (86)",
+            "type": "@stone_wall",
+            "pos": [-21984.0, -19360.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "stop_wall_top (145)",
+            "type": "@stop_wall_top",
+            "pos": [-21984.0, -19424.0],
+            "size": [64, 64]
+        },
+        {
+            "id": "nether_portal (1)",
+            "type": "@nether_portal",
+            "pos": [0.0, 0.0],
+            "size": [2048, 2048]
+        },
+        {
+            "id": "title",
+            "type": "@title",
+            "pos": [-1.0, -16.0]
+        },
+        {
+            "id": "hair",
+            "type": "@hair",
+            "pos": [-1.0, 1.0]
+        },
+        {
+            "id": "team_spawn",
+            "type": "team_spawn",
+            "pos": [-24001.0, -18113.0]
+        },
+        {
+            "id": "team_spawn (2)",
+            "type": "team_spawn",
+            "faction": "METROPOLIS",
+            "pos": [-19841.0, -15041.0]
+        },
+        {
+            "id": "hazard",
+            "type": "hazard",
+            "pos": [-19776.0, -17792.0],
+            "size": [256, 256],
+            "ambience_particles": {
+                "id": null
+            }
+        },
+        {
+            "id": "hazard (1)",
+            "type": "hazard",
+            "pos": [-20032.0, -17728.0],
+            "size": [256, 128],
+            "ambience_particles": {
+                "id": null
+            }
+        },
+        {
+            "id": "hazard (2)",
+            "type": "hazard",
+            "pos": [-20352.0, -17856.0],
+            "ambience_particles": {
+                "id": null
+            }
+        },
+        {
+            "id": "hazard (3)",
+            "type": "hazard",
+            "pos": [-20256.0, -17792.0],
+            "size": [64, 128],
+            "ambience_particles": {
+                "id": null
+            }
+        },
+        {
+            "id": "hazard (4)",
+            "type": "hazard",
+            "pos": [-20192.0, -17760.0],
+            "size": [64, 64],
+            "ambience_particles": {
+                "id": null
+            }
+        },
+        {
+            "id": "hazard (5)",
+            "type": "hazard",
+            "pos": [-19936.0, -17824.0],
+            "size": [64, 64],
+            "ambience_particles": {
+                "id": null
+            }
+        },
+        {
+            "id": "hazard (6)",
+            "type": "hazard",
+            "pos": [-19776.0, -17984.0],
+            "ambience_particles": {
+                "id": null
+            }
+        },
+        {
+            "id": "hazard (7)",
+            "type": "hazard",
+            "pos": [-19808.0, -18080.0],
+            "size": [64, 64],
+            "ambience_particles": {
+                "id": null
+            }
+        },
+        {
+            "id": "hazard (8)",
+            "type": "hazard",
+            "pos": [-24000.0, -16064.0],
+            "reacts_to": {
+                "obstacles": false
+            },
+            "ambience_particles": {
+                "id": null
+            }
+        },
+        {
+            "id": "hazard (9)",
+            "type": "hazard",
+            "pos": [-24000.0, -15296.0009765625],
+            "reacts_to": {
+                "obstacles": false
+            },
+            "ambience_particles": {
+                "id": null
+            }
+        },
+        {
+            "id": "hazard (10)",
+            "type": "hazard",
+            "pos": [-24000.0, -14592.0],
+            "reacts_to": {
+                "obstacles": false
+            },
+            "ambience_particles": {
+                "id": null
+            }
+        },
+        {
+            "id": "portal",
+            "type": "portal",
+            "shape": "BOX",
+            "pos": [-24576.0, -13184.0],
+            "size": [2048, 256],
+            "disable_all_entry_effects": true,
+            "disable_all_exit_effects": true,
+            "enter_time_ms": 0.0,
+            "travel_time_ms": 0.0,
+            "reacts_to": {
+                "character_weapons": false,
+                "bullets": false,
+                "flying_explosives": false,
+                "flying_melees": false,
+                "lying_items": false,
+                "shells": false,
+                "obstacles": false
+            },
+            "portal_exit": "portal (1)"
+        },
+        {
+            "id": "portal (1)",
+            "type": "portal",
+            "shape": "BOX",
+            "pos": [-20032.0, -17984.0],
+            "size": [128, 128],
+            "disable_all_entry_effects": true,
+            "color_preset": "CUSTOM",
+            "exit_shake": {
+                "duration_ms": 0.0
+            },
+            "exit_particles": {
+                "color": [121, 0, 255, 255]
+            },
+            "character_exit_airborne_ms": 0.0,
+            "character_exit_impulse": {
+                "amount": 0.0
+            }
+        },
+        {
+            "id": "portal (2)",
+            "type": "portal",
+            "shape": "BOX",
+            "pos": [-25696.0, -13567.9990234375],
+            "size": [192, 1024],
+            "disable_all_entry_effects": true,
+            "disable_all_exit_effects": true,
+            "enter_time_ms": 0.0,
+            "travel_time_ms": 0.0,
+            "reacts_to": {
+                "character_weapons": false,
+                "bullets": false,
+                "flying_explosives": false,
+                "flying_melees": false,
+                "lying_items": false,
+                "shells": false,
+                "obstacles": false
+            },
+            "portal_exit": "portal (1)"
+        }
+    ]
+}
