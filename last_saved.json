@@ -2,7 +2,7 @@
     "meta": {
         "game_version": "1.2.8290",
         "name": "mc_overworld_1_1",
-        "version_timestamp": "2023-10-24 07:02:34.108037 UTC"
+        "version_timestamp": "2023-10-24 07:01:44.033942 UTC"
     },
     "about": {
         "author": "Moxvallix",
@@ -21,6 +21,299 @@
         "mode": "gun_game"
     },
     "external_resources": [
+        {
+            "path": "coarse_dirt.png",
+            "file_hash": "e44e6caaa43a4e4ab7028b3bcb544100a3d5a0c2b2c6a611f33d370c1c86e723",
+            "id": "@coarse_dirt",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@gravel"
+                    }
+                }
+            }
+        },
+        {
+            "path": "cobblestone.png",
+            "file_hash": "9c630781b9114fc87a0e15192aad600ef824f53ca0e569c16bfff50bced2d11d",
+            "id": "@cobblestone",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@sounds/stone.ogg"
+                    }
+                }
+            }
+        },
+        {
+            "path": "cobblestone_wall.png",
+            "file_hash": "f91eccadbbd2be1bcbb60023e9eb1b9bd1e4240d88710c0ac08b9f85772331fd",
+            "id": "@cobblestone_wall",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true
+            },
+            "as_nonphysical": {
+                "illuminate_like_wall": true
+            }
+        },
+        {
+            "path": "cobblestone_wall_top.png",
+            "file_hash": "1f0ad9ff6859104918b5a0b3a2e4ab834d01994407ad23c3843224ee4aed3aa5",
+            "id": "@cobblestone_wall_top",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true
+            },
+            "as_nonphysical": {
+                "illuminate_like_wall": true
+            }
+        },
+        {
+            "path": "dirt.png",
+            "file_hash": "4d90e9ca60c67466ad35e68d4c47057565b6c623e4ed379bb016e02b0ca11924",
+            "id": "@dirt",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@gravel"
+                    }
+                }
+            }
+        },
+        {
+            "path": "dirt_path.png",
+            "file_hash": "296debfd545bd34c6933b0ebbe7ad0b48b4744ff2c6e63f99d649a4001ad3846",
+            "id": "@dirt_path",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@sounds/grass.ogg"
+                    }
+                }
+            }
+        },
+        {
+            "path": "easteregg.png",
+            "file_hash": "cf47ac84c16e5cf390d3b7c9d2c0bda540e1e9ca0139e33548983fa1499072b7",
+            "id": "@easteregg",
+            "domain": "FOREGROUND",
+            "size": [1023, 140]
+        },
+        {
+            "path": "fg_obsidian.png",
+            "file_hash": "a510ba35f34acda15d78e3ff3e7836d48b959f0106e68637949495da693efd3b",
+            "id": "@fg_obsidian",
+            "domain": "FOREGROUND",
+            "size": [64, 64]
+        },
+        {
+            "path": "fg_stone.png",
+            "file_hash": "966607dc4dc7163f659fa48b950d5b4e75b686de16b5af64532a56356b97bb81",
+            "id": "@fg_stone",
+            "domain": "FOREGROUND",
+            "size": [64, 64]
+        },
+        {
+            "path": "fg_stone_wall.png",
+            "file_hash": "41f6f56f43e284b72a84e1450011cecd3cd644d19c4d633c4a26babbd8b77f6e",
+            "id": "@fg_stone_wall",
+            "domain": "FOREGROUND",
+            "size": [64, 64]
+        },
+        {
+            "path": "grass.png",
+            "file_hash": "0192ebcb06049dc1357df617de166e9bf089231912c3fe00e2a7a5627d8cf5eb",
+            "id": "@grass.png",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@sounds/grass.ogg"
+                    }
+                }
+            }
+        },
+        {
+            "path": "grass_wall.png",
+            "file_hash": "53299169c9c30559bd4a55df556fdcb2aec45d3579587dbc94a8fa4ad6311860",
+            "id": "@grass_wall",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true,
+                "material": "wood"
+            }
+        },
+        {
+            "path": "grass_wall_top.png",
+            "file_hash": "0192ebcb06049dc1357df617de166e9bf089231912c3fe00e2a7a5627d8cf5eb",
+            "id": "@grass_wall_top",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true,
+                "material": "wood"
+            },
+            "as_nonphysical": {
+                "illuminate_like_wall": true
+            }
+        },
+        {
+            "path": "lava.gif",
+            "file_hash": "137b2353a1570b901f1c8ca5ab7f85e89b7fc5c2f28a769658c3883acbe01761",
+            "id": "@lava",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "illuminate_like_wall": true,
+                "custom_footstep": {
+                    "walking_speed": 0.4300000071525574
+                }
+            }
+        },
+        {
+            "path": "miniature.png",
+            "file_hash": "d45f43dc67102eea71e4ff70ab468cb2d3a3a04e609c12a8b90b35d3137a2c2a",
+            "id": "@miniature",
+            "size": [400, 400]
+        },
+        {
+            "path": "nether_portal.gif",
+            "file_hash": "4a66962b5d6bdcc7ab92f9f08af0026b3e091f2c1d2b1b6d4d04568b220d4f2b",
+            "id": "@nether_portal",
+            "size": [64, 64]
+        },
+        {
+            "path": "noclip_grass_wall_top.png",
+            "file_hash": "0192ebcb06049dc1357df617de166e9bf089231912c3fe00e2a7a5627d8cf5eb",
+            "id": "@noclip_grass_wall_top",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true,
+                "is_walk_through": true,
+                "is_throw_through": true,
+                "is_melee_throw_through": true,
+                "is_shoot_through": true
+            }
+        },
+        {
+            "path": "noclip_stone.png",
+            "file_hash": "966607dc4dc7163f659fa48b950d5b4e75b686de16b5af64532a56356b97bb81",
+            "id": "@noclip_stone",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true,
+                "is_walk_through": true,
+                "is_throw_through": true,
+                "is_melee_throw_through": true,
+                "is_shoot_through": true
+            }
+        },
+        {
+            "path": "noclip_stone_wall.png",
+            "file_hash": "41f6f56f43e284b72a84e1450011cecd3cd644d19c4d633c4a26babbd8b77f6e",
+            "id": "@noclip_stone_wall",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true,
+                "is_walk_through": true,
+                "is_throw_through": true,
+                "is_melee_throw_through": true,
+                "is_shoot_through": true
+            }
+        },
+        {
+            "path": "oak_leaves.png",
+            "file_hash": "c18bb699f814b6df21ecfe2564186914f2cd29e7233b54d5a0e6e0b8a4d03151",
+            "id": "@oak_leaves",
+            "domain": "FOREGROUND",
+            "size": [64, 64]
+        },
+        {
+            "path": "oak_log_top.png",
+            "file_hash": "4abf98a80f7e7de99fe8f6a4666e796e83e4b3b1ae7d1df9d0334de4c4b4b6eb",
+            "id": "@oak_log_top",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true,
+                "material": "wood"
+            }
+        },
+        {
+            "path": "oak_planks.png",
+            "file_hash": "9d3b1814e79d7b43e1889809b8cd32703134d024cfdb37a37e99a191de7fcfa4",
+            "id": "@oak_planks",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@wood"
+                    }
+                }
+            }
+        },
+        {
+            "path": "oak_stairs.png",
+            "file_hash": "973e2a381b236fc8f64b2034a049f0349f318b14447e55d212ad59873c552e3a",
+            "id": "@oak_stairs",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@wood"
+                    }
+                }
+            }
+        },
+        {
+            "path": "obsidian.png",
+            "file_hash": "a510ba35f34acda15d78e3ff3e7836d48b959f0106e68637949495da693efd3b",
+            "id": "@obsidian",
+            "size": [64, 64]
+        },
+        {
+            "path": "stone.png",
+            "file_hash": "5f69b35caf33ddf82f1e9ab3f348bd114ba32d0090b37be03374bbfcc40d8b89",
+            "id": "@stone.png",
+            "size": [64, 64],
+            "as_nonphysical": {
+                "custom_footstep": {
+                    "sound": {
+                        "id": "@sounds/stone.ogg"
+                    }
+                }
+            }
+        },
+        {
+            "path": "stone_wall.png",
+            "file_hash": "41f6f56f43e284b72a84e1450011cecd3cd644d19c4d633c4a26babbd8b77f6e",
+            "id": "@stone_wall",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true
+            }
+        },
+        {
+            "path": "stop_wall_top.png",
+            "file_hash": "966607dc4dc7163f659fa48b950d5b4e75b686de16b5af64532a56356b97bb81",
+            "id": "@stop_wall_top",
+            "domain": "PHYSICAL",
+            "size": [64, 64],
+            "as_physical": {
+                "is_static": true
+            }
+        },
         {
             "path": "textures/bg_grass_wall.png",
             "file_hash": "53299169c9c30559bd4a55df556fdcb2aec45d3579587dbc94a8fa4ad6311860",
@@ -52,300 +345,13 @@
             }
         },
         {
-            "path": "textures/coarse_dirt.png",
-            "file_hash": "e44e6caaa43a4e4ab7028b3bcb544100a3d5a0c2b2c6a611f33d370c1c86e723",
-            "id": "@coarse_dirt",
-            "size": [64, 64],
-            "as_nonphysical": {
-                "custom_footstep": {
-                    "sound": {
-                        "id": "@gravel"
-                    }
-                }
-            }
-        },
-        {
-            "path": "textures/cobblestone.png",
-            "file_hash": "9c630781b9114fc87a0e15192aad600ef824f53ca0e569c16bfff50bced2d11d",
-            "id": "@cobblestone",
-            "size": [64, 64],
-            "as_nonphysical": {
-                "custom_footstep": {
-                    "sound": {
-                        "id": "@sounds/stone.ogg"
-                    }
-                }
-            }
-        },
-        {
-            "path": "textures/cobblestone_wall.png",
-            "file_hash": "f91eccadbbd2be1bcbb60023e9eb1b9bd1e4240d88710c0ac08b9f85772331fd",
-            "id": "@cobblestone_wall",
-            "domain": "PHYSICAL",
-            "size": [64, 64],
-            "as_physical": {
-                "is_static": true
-            },
-            "as_nonphysical": {
-                "illuminate_like_wall": true
-            }
-        },
-        {
-            "path": "textures/cobblestone_wall_top.png",
-            "file_hash": "1f0ad9ff6859104918b5a0b3a2e4ab834d01994407ad23c3843224ee4aed3aa5",
-            "id": "@cobblestone_wall_top",
-            "domain": "PHYSICAL",
-            "size": [64, 64],
-            "as_physical": {
-                "is_static": true
-            },
-            "as_nonphysical": {
-                "illuminate_like_wall": true
-            }
-        },
-        {
-            "path": "textures/dirt.png",
-            "file_hash": "4d90e9ca60c67466ad35e68d4c47057565b6c623e4ed379bb016e02b0ca11924",
-            "id": "@dirt",
-            "size": [64, 64],
-            "as_nonphysical": {
-                "custom_footstep": {
-                    "sound": {
-                        "id": "@gravel"
-                    }
-                }
-            }
-        },
-        {
-            "path": "textures/dirt_path.png",
-            "file_hash": "296debfd545bd34c6933b0ebbe7ad0b48b4744ff2c6e63f99d649a4001ad3846",
-            "id": "@dirt_path",
-            "size": [64, 64],
-            "as_nonphysical": {
-                "custom_footstep": {
-                    "sound": {
-                        "id": "@sounds/grass.ogg"
-                    }
-                }
-            }
-        },
-        {
-            "path": "textures/easteregg.png",
-            "file_hash": "cf47ac84c16e5cf390d3b7c9d2c0bda540e1e9ca0139e33548983fa1499072b7",
-            "id": "@easteregg",
-            "domain": "FOREGROUND",
-            "size": [1023, 140]
-        },
-        {
-            "path": "textures/fg_obsidian.png",
-            "file_hash": "a510ba35f34acda15d78e3ff3e7836d48b959f0106e68637949495da693efd3b",
-            "id": "@fg_obsidian",
-            "domain": "FOREGROUND",
-            "size": [64, 64]
-        },
-        {
-            "path": "textures/fg_stone.png",
-            "file_hash": "966607dc4dc7163f659fa48b950d5b4e75b686de16b5af64532a56356b97bb81",
-            "id": "@fg_stone",
-            "domain": "FOREGROUND",
-            "size": [64, 64]
-        },
-        {
-            "path": "textures/fg_stone_wall.png",
-            "file_hash": "41f6f56f43e284b72a84e1450011cecd3cd644d19c4d633c4a26babbd8b77f6e",
-            "id": "@fg_stone_wall",
-            "domain": "FOREGROUND",
-            "size": [64, 64]
-        },
-        {
-            "path": "textures/grass.png",
-            "file_hash": "0192ebcb06049dc1357df617de166e9bf089231912c3fe00e2a7a5627d8cf5eb",
-            "id": "@textures/grass.png",
-            "size": [64, 64],
-            "as_nonphysical": {
-                "custom_footstep": {
-                    "sound": {
-                        "id": "@sounds/grass.ogg"
-                    }
-                }
-            }
-        },
-        {
-            "path": "textures/grass_wall.png",
-            "file_hash": "53299169c9c30559bd4a55df556fdcb2aec45d3579587dbc94a8fa4ad6311860",
-            "id": "@grass_wall",
-            "domain": "PHYSICAL",
-            "size": [64, 64],
-            "as_physical": {
-                "is_static": true,
-                "material": "wood"
-            }
-        },
-        {
-            "path": "textures/grass_wall_top.png",
-            "file_hash": "0192ebcb06049dc1357df617de166e9bf089231912c3fe00e2a7a5627d8cf5eb",
-            "id": "@grass_wall_top",
-            "domain": "PHYSICAL",
-            "size": [64, 64],
-            "as_physical": {
-                "is_static": true,
-                "material": "wood"
-            },
-            "as_nonphysical": {
-                "illuminate_like_wall": true
-            }
-        },
-        {
-            "path": "textures/lava.gif",
-            "file_hash": "137b2353a1570b901f1c8ca5ab7f85e89b7fc5c2f28a769658c3883acbe01761",
-            "id": "@lava",
-            "size": [64, 64],
-            "as_nonphysical": {
-                "illuminate_like_wall": true,
-                "custom_footstep": {
-                    "walking_speed": 0.4300000071525574
-                }
-            }
-        },
-        {
-            "path": "textures/nether_portal.gif",
-            "file_hash": "4a66962b5d6bdcc7ab92f9f08af0026b3e091f2c1d2b1b6d4d04568b220d4f2b",
-            "id": "@nether_portal",
-            "size": [64, 64]
-        },
-        {
-            "path": "textures/noclip_grass_wall_top.png",
-            "file_hash": "0192ebcb06049dc1357df617de166e9bf089231912c3fe00e2a7a5627d8cf5eb",
-            "id": "@noclip_grass_wall_top",
-            "domain": "PHYSICAL",
-            "size": [64, 64],
-            "as_physical": {
-                "is_static": true,
-                "is_walk_through": true,
-                "is_throw_through": true,
-                "is_melee_throw_through": true,
-                "is_shoot_through": true
-            }
-        },
-        {
-            "path": "textures/noclip_stone.png",
-            "file_hash": "966607dc4dc7163f659fa48b950d5b4e75b686de16b5af64532a56356b97bb81",
-            "id": "@noclip_stone",
-            "domain": "PHYSICAL",
-            "size": [64, 64],
-            "as_physical": {
-                "is_static": true,
-                "is_walk_through": true,
-                "is_throw_through": true,
-                "is_melee_throw_through": true,
-                "is_shoot_through": true
-            }
-        },
-        {
-            "path": "textures/noclip_stone_wall.png",
-            "file_hash": "41f6f56f43e284b72a84e1450011cecd3cd644d19c4d633c4a26babbd8b77f6e",
-            "id": "@noclip_stone_wall",
-            "domain": "PHYSICAL",
-            "size": [64, 64],
-            "as_physical": {
-                "is_static": true,
-                "is_walk_through": true,
-                "is_throw_through": true,
-                "is_melee_throw_through": true,
-                "is_shoot_through": true
-            }
-        },
-        {
-            "path": "textures/oak_leaves.png",
-            "file_hash": "c18bb699f814b6df21ecfe2564186914f2cd29e7233b54d5a0e6e0b8a4d03151",
-            "id": "@oak_leaves",
-            "domain": "FOREGROUND",
-            "size": [64, 64]
-        },
-        {
-            "path": "textures/oak_log_top.png",
-            "file_hash": "4abf98a80f7e7de99fe8f6a4666e796e83e4b3b1ae7d1df9d0334de4c4b4b6eb",
-            "id": "@oak_log_top",
-            "domain": "PHYSICAL",
-            "size": [64, 64],
-            "as_physical": {
-                "is_static": true,
-                "material": "wood"
-            }
-        },
-        {
-            "path": "textures/oak_planks.png",
-            "file_hash": "9d3b1814e79d7b43e1889809b8cd32703134d024cfdb37a37e99a191de7fcfa4",
-            "id": "@oak_planks",
-            "size": [64, 64],
-            "as_nonphysical": {
-                "custom_footstep": {
-                    "sound": {
-                        "id": "@wood"
-                    }
-                }
-            }
-        },
-        {
-            "path": "textures/oak_stairs.png",
-            "file_hash": "973e2a381b236fc8f64b2034a049f0349f318b14447e55d212ad59873c552e3a",
-            "id": "@oak_stairs",
-            "size": [64, 64],
-            "as_nonphysical": {
-                "custom_footstep": {
-                    "sound": {
-                        "id": "@wood"
-                    }
-                }
-            }
-        },
-        {
-            "path": "textures/obsidian.png",
-            "file_hash": "a510ba35f34acda15d78e3ff3e7836d48b959f0106e68637949495da693efd3b",
-            "id": "@obsidian",
-            "size": [64, 64]
-        },
-        {
-            "path": "textures/stone.png",
-            "file_hash": "5f69b35caf33ddf82f1e9ab3f348bd114ba32d0090b37be03374bbfcc40d8b89",
-            "id": "@textures/stone.png",
-            "size": [64, 64],
-            "as_nonphysical": {
-                "custom_footstep": {
-                    "sound": {
-                        "id": "@sounds/stone.ogg"
-                    }
-                }
-            }
-        },
-        {
-            "path": "textures/stone_wall.png",
-            "file_hash": "41f6f56f43e284b72a84e1450011cecd3cd644d19c4d633c4a26babbd8b77f6e",
-            "id": "@stone_wall",
-            "domain": "PHYSICAL",
-            "size": [64, 64],
-            "as_physical": {
-                "is_static": true
-            }
-        },
-        {
-            "path": "textures/stop_wall_top.png",
-            "file_hash": "966607dc4dc7163f659fa48b950d5b4e75b686de16b5af64532a56356b97bb81",
-            "id": "@stop_wall_top",
-            "domain": "PHYSICAL",
-            "size": [64, 64],
-            "as_physical": {
-                "is_static": true
-            }
-        },
-        {
-            "path": "textures/title.png",
+            "path": "title.png",
             "file_hash": "80c6363339dcb96d6f55659ccc3831443d3f6f472d9f9a249411a5ce13f51424",
             "id": "@title",
             "size": [1023, 159]
         },
         {
-            "path": "textures/water_dirt.gif",
+            "path": "water_dirt.gif",
             "file_hash": "83e586ff00e1479b19aeb221d04c259fb0a1b4454c87c823686b22bc5b64eb78",
             "id": "@water_dirt",
             "size": [64, 64],
@@ -1067,13 +1073,13 @@
     "nodes": [
         {
             "id": "grass",
-            "type": "@textures/grass.png",
+            "type": "@grass.png",
             "pos": [-23552.0, -16896.0],
             "size": [4096, 7168]
         },
         {
             "id": "stone",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-19968.0, -16896.0],
             "size": [3072, 7168]
         },
@@ -1120,18 +1126,18 @@
         },
         {
             "id": "stone (1)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-20896.0, -19168.0]
         },
         {
             "id": "stone (2)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-20832.0, -19104.0],
             "size": [192, 64]
         },
         {
             "id": "stone (3)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-20576.0, -19104.0]
         },
         {
@@ -1158,7 +1164,7 @@
         },
         {
             "id": "stone (4)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-20608.0, -19360.0],
             "size": [128, 64]
         },
@@ -1221,7 +1227,7 @@
         },
         {
             "id": "stone (5)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-19872.0, -18016.0]
         },
         {
@@ -1253,7 +1259,7 @@
         },
         {
             "id": "stone (6)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-20064.0, -17888.0],
             "size": [192, 64]
         },
@@ -1271,7 +1277,7 @@
         },
         {
             "id": "stone (7)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-20224.0, -17920.0],
             "size": [128, 128]
         },
@@ -1394,12 +1400,12 @@
         },
         {
             "id": "grass (1)",
-            "type": "@textures/grass.png",
+            "type": "@grass.png",
             "pos": [-24032.0, -16736.0]
         },
         {
             "id": "grass (2)",
-            "type": "@textures/grass.png",
+            "type": "@grass.png",
             "pos": [-23968.0, -16864.0]
         },
         {
@@ -1528,7 +1534,7 @@
         },
         {
             "id": "grass (3)",
-            "type": "@textures/grass.png",
+            "type": "@grass.png",
             "pos": [-22112.0, -18720.0]
         },
         {
@@ -1555,29 +1561,29 @@
         },
         {
             "id": "grass (4)",
-            "type": "@textures/grass.png",
+            "type": "@grass.png",
             "pos": [-22112.0, -18464.0]
         },
         {
             "id": "grass (5)",
-            "type": "@textures/grass.png",
+            "type": "@grass.png",
             "pos": [-22080.0, -18400.0],
             "size": [128, 64]
         },
         {
             "id": "grass (6)",
-            "type": "@textures/grass.png",
+            "type": "@grass.png",
             "pos": [-21856.0, -18400.0]
         },
         {
             "id": "stone (8)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-23552.0, -14720.0],
             "size": [4096, 2816]
         },
         {
             "id": "stone (9)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-22016.0, -16640.0],
             "size": [1024, 1024]
         },
@@ -1630,12 +1636,12 @@
         },
         {
             "id": "stone (10)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-22176.0, -17184.0]
         },
         {
             "id": "stone (11)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-21984.0, -17184.0]
         },
         {
@@ -1947,13 +1953,13 @@
         },
         {
             "id": "stone (12)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-21760.0, -19296.0],
             "size": [512, 320]
         },
         {
             "id": "stone (13)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-21568.0, -18048.0],
             "size": [128, 512]
         },
@@ -2979,7 +2985,7 @@
         },
         {
             "id": "grass (7)",
-            "type": "@textures/grass.png",
+            "type": "@grass.png",
             "pos": [-22496.0, -17120.0]
         },
         {
@@ -3854,13 +3860,13 @@
         },
         {
             "id": "stone (14)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-22976.0, -16384.0],
             "size": [896, 512]
         },
         {
             "id": "stone (15)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-22880.0, -16768.0],
             "size": [704, 256]
         },
@@ -4432,13 +4438,13 @@
         },
         {
             "id": "stone (16)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-21696.0, -18080.0],
             "size": [128, 192]
         },
         {
             "id": "stone (17)",
-            "type": "@textures/stone.png",
+            "type": "@stone.png",
             "pos": [-21568.0, -19040.0],
             "size": [128, 192]
         },
